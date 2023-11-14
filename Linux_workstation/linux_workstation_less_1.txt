@@ -1,0 +1,381 @@
+georgiy@fedora:~ $ uname
+Linux
+georgiy@fedora:~ $ uname -a
+Linux fedora 5.19.12-200.fc36.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Sep 28 17:11:05 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+georgiy@fedora:~ $ hostnamectl
+   Static hostname: n/a                             
+Transient hostname: fedora
+         Icon name: computer-laptop
+           Chassis: laptop 💻
+        Machine ID: 4e591c2445c04ae8aaecfe66349b98f0
+           Boot ID: 940b8052c0b342f08af4e5d1a4a41880
+  Operating System: Fedora Linux 36 (KDE Plasma)    
+       CPE OS Name: cpe:/o:fedoraproject:fedora:36
+            Kernel: Linux 5.19.12-200.fc36.x86_64
+      Architecture: x86-64
+   Hardware Vendor: ASUSTeK COMPUTER INC.
+    Hardware Model: N46VZ
+georgiy@fedora:~ $ lsb_release -a
+LSB Version:    :core-4.1-amd64:core-4.1-noarch
+Distributor ID: Fedora
+Description:    Fedora release 36 (Thirty Six)
+Release:        36
+Codename:       ThirtySix
+georgiy@fedora:~ $ sudo dnf update --refresh
+[sudo] пароль для georgiy: 
+Fedora 36 - x86_64                                                                                                                      28 kB/s |  20 kB     00:00    
+Fedora 36 openh264 (From Cisco) - x86_64                                                                                               3.2 kB/s | 989  B     00:00    
+Fedora Modular 36 - x86_64                                                                                                              46 kB/s |  19 kB     00:00    
+Fedora 36 - x86_64 - Updates                                                                                                            42 kB/s |  14 kB     00:00    
+Fedora 36 - x86_64 - Updates                                                                                                           916 kB/s | 2.9 MB     00:03    
+Fedora Modular 36 - x86_64 - Updates                                                                                                    26 kB/s |  18 kB     00:00    
+pgadmin4                                                                                                                               995  B/s | 833  B     00:00    
+PostgreSQL common RPMs for Fedora 36 - x86_64                                                                                          224  B/s | 195  B     00:00    
+PostgreSQL 15 for Fedora 36 - x86_64                                                                                                   145  B/s | 195  B     00:01    
+PostgreSQL 14 for Fedora 36 - x86_64                                                                                                   222  B/s | 195  B     00:00    
+PostgreSQL 13 for Fedora 36 - x86_64                                                                                                   250  B/s | 195  B     00:00    
+PostgreSQL 12 for Fedora 36 - x86_64                                                                                                   303  B/s | 195  B     00:00    
+PostgreSQL 11 for Fedora 36 - x86_64                                                                                                   268  B/s | 195  B     00:00    
+PostgreSQL 10 for Fedora 36 - x86_64                                                                                                   167  B/s | 195  B     00:01    
+created by dnf config-manager from http://repo.yandex.ru/yandex-browser/rpm/stable/x86_64                                               20 kB/s | 3.0 kB     00:00    
+RPM Fusion for Fedora 36 - Free                                                                                                         24 kB/s | 7.5 kB     00:00    
+RPM Fusion for Fedora 36 - Free - Updates                                                                                               21 kB/s | 6.8 kB     00:00    
+RPM Fusion for Fedora 36 - Nonfree                                                                                                      14 kB/s | 7.6 kB     00:00    
+RPM Fusion for Fedora 36 - Nonfree - Updates                                                                                            27 kB/s | 6.9 kB     00:00    
+yandex-browser                                                                                                                          37 kB/s | 3.0 kB     00:00    
+Зависимости разрешены.
+=======================================================================================================================================================================
+ Пакет                                                       Архитектура               Версия                                   Репозиторий                      Размер
+=======================================================================================================================================================================
+Установка:
+ kernel                                                      x86_64                    5.19.13-200.fc36                         updates                          262 k
+ kernel-devel                                                x86_64                    5.19.13-200.fc36                         updates                           16 M
+ kernel-modules                                              x86_64                    5.19.13-200.fc36                         updates                           58 M
+ kernel-modules-extra                                        x86_64                    5.19.13-200.fc36                         updates                          3.7 M
+Обновление:
+ copy-jdk-configs                                            noarch                    4.1-1.fc36                               updates                           28 k
+ firefox                                                     x86_64                    105.0.2-1.fc36                           updates                          104 M
+ fontconfig                                                  i686                      2.14.0-3.fc36                            updates                          285 k
+ fontconfig                                                  x86_64                    2.14.0-3.fc36                            updates                          275 k
+ gdk-pixbuf2                                                 x86_64                    2.42.9-2.fc36                            updates                          466 k
+ gdk-pixbuf2-modules                                         x86_64                    2.42.9-2.fc36                            updates                           85 k
+ kernel-devel-matched                                        x86_64                    5.19.13-200.fc36                         updates                          262 k
+ kf5-kimageformats                                           x86_64                    5.98.0-2.fc36                            updates                          201 k
+ mtools                                                      x86_64                    4.0.41-1.fc36                            updates                          210 k
+Установка зависимостей:
+ kernel-core                                                 x86_64                    5.19.13-200.fc36                         updates                           50 M
+Удаление:
+ kernel                                                      x86_64                    5.19.9-200.fc36                          @updates                           0  
+ kernel-core                                                 x86_64                    5.19.9-200.fc36                          @updates                          92 M
+ kernel-devel                                                x86_64                    5.19.9-200.fc36                          @updates                          65 M
+ kernel-modules                                              x86_64                    5.19.9-200.fc36                          @updates                          57 M
+ kernel-modules-extra                                        x86_64                    5.19.9-200.fc36                          @updates                         3.4 M
+Удаление зависимых пакетов:
+ kmod-nvidia-470xx-5.19.9-200.fc36.x86_64                    x86_64                    3:470.141.03-1.fc36                      @@commandline                     24 M
+
+Результат транзакции
+=======================================================================================================================================================================
+Установка   5 Пакетов
+Обновление  9 Пакетов
+Удаление    6 Пакетов
+
+Объем загрузки: 233 M
+Все правильно? [Д/н]: y
+Загрузка пакетов:
+[MIRROR] firefox-105.0.2-1.fc36.x86_64.rpm: Status code: 404 for http://ftp.upjs.sk/pub/fedora/linux/updates/36/Everything/x86_64/Packages/f/firefox-105.0.2-1.fc36.x86_64.rpm (IP: 158.197.16.70)
+[MIRROR] firefox-105.0.2-1.fc36.x86_64.rpm: Status code: 404 for http://fedora.ip-connect.vn.ua/linux/updates/36/Everything/x86_64/Packages/f/firefox-105.0.2-1.fc36.x86_64.rpm (IP: 91.236.251.35)
+(1/14): fontconfig-2.14.0-3.fc36.i686.rpm                                                                                              392 kB/s | 285 kB     00:00    
+[MIRROR] firefox-105.0.2-1.fc36.x86_64.rpm: Status code: 404 for http://ftp.uni-bayreuth.de/linux/fedora/linux/updates/36/Everything/x86_64/Packages/f/firefox-105.0.2-1.fc36.x86_64.rpm (IP: 132.180.8.60)
+(2/14): copy-jdk-configs-4.1-1.fc36.noarch.rpm                                                                                          30 kB/s |  28 kB     00:00    
+(3/14): gdk-pixbuf2-2.42.9-2.fc36.x86_64.rpm                                                                                           491 kB/s | 466 kB     00:00    
+(4/14): kf5-kimageformats-5.98.0-2.fc36.x86_64.rpm                                                                                     874 kB/s | 201 kB     00:00    
+(5/14): gdk-pixbuf2-modules-2.42.9-2.fc36.x86_64.rpm                                                                                   158 kB/s |  85 kB     00:00    
+[MIRROR] firefox-105.0.2-1.fc36.x86_64.rpm: Status code: 404 for https://ftp.halifax.rwth-aachen.de/fedora/linux/updates/36/Everything/x86_64/Packages/f/firefox-105.0.2-1.fc36.x86_64.rpm (IP: 137.226.34.46)
+(6/14): kernel-5.19.13-200.fc36.x86_64.rpm                                                                                             187 kB/s | 262 kB     00:01    
+(7/14): fontconfig-2.14.0-3.fc36.x86_64.rpm                                                                                            195 kB/s | 275 kB     00:01    
+(8/14): mtools-4.0.41-1.fc36.x86_64.rpm                                                                                                888 kB/s | 210 kB     00:00    
+(9/14): kernel-devel-matched-5.19.13-200.fc36.x86_64.rpm                                                                               169 kB/s | 262 kB     00:01    
+(10/14): firefox-105.0.2-1.fc36.x86_64.rpm                                                                                             7.2 MB/s | 104 MB     00:14    
+(11/14): kernel-modules-extra-5.19.13-200.fc36.x86_64.rpm                                                                              196 kB/s | 3.7 MB     00:19    
+(12/14): kernel-devel-5.19.13-200.fc36.x86_64.rpm                                                                                      827 kB/s |  16 MB     00:19    
+(13/14): kernel-core-5.19.13-200.fc36.x86_64.rpm                                                                                       2.0 MB/s |  50 MB     00:24    
+(14/14): kernel-modules-5.19.13-200.fc36.x86_64.rpm                                                                                    1.5 MB/s |  58 MB     00:38    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Общий размер                                                                                                                           5.9 MB/s | 233 MB     00:39     
+Проверка транзакции
+Проверка транзакции успешно завершена.
+Идет проверка транзакции
+Тест транзакции проведен успешно.
+Выполнение транзакции
+  Запуск скриптлета: firefox-105.0.2-1.fc36.x86_64                                                                                                                 1/1 
+  Запуск скриптлета: copy-jdk-configs-4.1-1.fc36.noarch                                                                                                            1/1 
+  Подготовка       :                                                                                                                                               1/1 
+  Установка        : kernel-core-5.19.13-200.fc36.x86_64                                                                                                          1/29 
+  Запуск скриптлета: kernel-core-5.19.13-200.fc36.x86_64                                                                                                          1/29 
+  Установка        : kernel-modules-5.19.13-200.fc36.x86_64                                                                                                       2/29 
+  Запуск скриптлета: kernel-modules-5.19.13-200.fc36.x86_64                                                                                                       2/29 
+  Обновление       : gdk-pixbuf2-2.42.9-2.fc36.x86_64                                                                                                             3/29 
+  Обновление       : fontconfig-2.14.0-3.fc36.x86_64                                                                                                              4/29 
+  Запуск скриптлета: fontconfig-2.14.0-3.fc36.x86_64                                                                                                              4/29 
+  Установка        : kernel-devel-5.19.13-200.fc36.x86_64                                                                                                         5/29 
+  Запуск скриптлета: kernel-devel-5.19.13-200.fc36.x86_64                                                                                                         5/29 
+  Обновление       : kernel-devel-matched-5.19.13-200.fc36.x86_64                                                                                                 6/29 
+  Обновление       : firefox-105.0.2-1.fc36.x86_64                                                                                                                7/29 
+  Запуск скриптлета: firefox-105.0.2-1.fc36.x86_64                                                                                                                7/29 
+  Обновление       : gdk-pixbuf2-modules-2.42.9-2.fc36.x86_64                                                                                                     8/29 
+  Установка        : kernel-5.19.13-200.fc36.x86_64                                                                                                               9/29 
+  Установка        : kernel-modules-extra-5.19.13-200.fc36.x86_64                                                                                                10/29 
+  Запуск скриптлета: kernel-modules-extra-5.19.13-200.fc36.x86_64                                                                                                10/29 
+  Обновление       : mtools-4.0.41-1.fc36.x86_64                                                                                                                 11/29 
+  Обновление       : kf5-kimageformats-5.98.0-2.fc36.x86_64                                                                                                      12/29 
+  Обновление       : copy-jdk-configs-4.1-1.fc36.noarch                                                                                                          13/29 
+  Обновление       : fontconfig-2.14.0-3.fc36.i686                                                                                                               14/29 
+  Запуск скриптлета: fontconfig-2.14.0-3.fc36.i686                                                                                                               14/29 
+  Удаление         : kernel-modules-extra-5.19.9-200.fc36.x86_64                                                                                                 15/29 
+  Запуск скриптлета: kernel-modules-extra-5.19.9-200.fc36.x86_64                                                                                                 15/29 
+  Удаление         : kernel-5.19.9-200.fc36.x86_64                                                                                                               16/29 
+  Запуск скриптлета: kernel-5.19.9-200.fc36.x86_64                                                                                                               16/29 
+  Удаление         : kernel-modules-5.19.9-200.fc36.x86_64                                                                                                       17/29 
+  Запуск скриптлета: kernel-modules-5.19.9-200.fc36.x86_64                                                                                                       17/29 
+  Удаление         : kmod-nvidia-470xx-5.19.9-200.fc36.x86_64-3:470.141.03-1.fc36.x86_64                                                                         18/29 
+  Запуск скриптлета: kmod-nvidia-470xx-5.19.9-200.fc36.x86_64-3:470.141.03-1.fc36.x86_64                                                                         18/29 
+  Запуск скриптлета: kernel-core-5.19.9-200.fc36.x86_64                                                                                                          19/29 
+  Удаление         : kernel-core-5.19.9-200.fc36.x86_64                                                                                                          19/29 
+  Удаление         : kernel-devel-5.19.9-200.fc36.x86_64                                                                                                         20/29 
+  Очистка          : kernel-devel-matched-5.19.12-200.fc36.x86_64                                                                                                21/29 
+  Очистка          : fontconfig-2.14.0-1.fc36.i686                                                                                                               22/29 
+  Запуск скриптлета: fontconfig-2.14.0-1.fc36.i686                                                                                                               22/29 
+  Очистка          : copy-jdk-configs-4.0-3.fc36.noarch                                                                                                          23/29 
+  Очистка          : gdk-pixbuf2-modules-2.42.9-1.fc36.x86_64                                                                                                    24/29 
+  Запуск скриптлета: firefox-105.0.1-1.fc36.x86_64                                                                                                               25/29 
+  Очистка          : firefox-105.0.1-1.fc36.x86_64                                                                                                               25/29 
+  Запуск скриптлета: firefox-105.0.1-1.fc36.x86_64                                                                                                               25/29 
+  Очистка          : fontconfig-2.14.0-1.fc36.x86_64                                                                                                             26/29 
+  Запуск скриптлета: fontconfig-2.14.0-1.fc36.x86_64                                                                                                             26/29 
+  Очистка          : gdk-pixbuf2-2.42.9-1.fc36.x86_64                                                                                                            27/29 
+  Очистка          : mtools-4.0.40-1.fc36.x86_64                                                                                                                 28/29 
+  Очистка          : kf5-kimageformats-5.98.0-1.fc36.x86_64                                                                                                      29/29 
+  Запуск скриптлета: kernel-core-5.19.13-200.fc36.x86_64                                                                                                         29/29 
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 2: ignoring bad line starting with 'default-sample-channels'
+libkmod: ERROR libkmod/libkmod-config.c:712 kmod_config_parse: /etc/modprobe.d/alsa-base.conf line 3: ignoring bad line starting with 'enable-lfe-remixing'
+
+  Запуск скриптлета: kernel-modules-5.19.13-200.fc36.x86_64                                                                                                      29/29 
+  Запуск скриптлета: fontconfig-2.14.0-3.fc36.x86_64                                                                                                             29/29 
+  Запуск скриптлета: firefox-105.0.2-1.fc36.x86_64                                                                                                               29/29 
+  Запуск скриптлета: copy-jdk-configs-4.1-1.fc36.noarch                                                                                                          29/29 
+  Запуск скриптлета: fontconfig-2.14.0-3.fc36.i686                                                                                                               29/29 
+  Запуск скриптлета: kf5-kimageformats-5.98.0-1.fc36.x86_64                                                                                                      29/29 
+  Проверка         : kernel-5.19.13-200.fc36.x86_64                                                                                                               1/29 
+  Проверка         : kernel-core-5.19.13-200.fc36.x86_64                                                                                                          2/29 
+  Проверка         : kernel-devel-5.19.13-200.fc36.x86_64                                                                                                         3/29 
+  Проверка         : kernel-modules-5.19.13-200.fc36.x86_64                                                                                                       4/29 
+  Проверка         : kernel-modules-extra-5.19.13-200.fc36.x86_64                                                                                                 5/29 
+  Проверка         : copy-jdk-configs-4.1-1.fc36.noarch                                                                                                           6/29 
+  Проверка         : copy-jdk-configs-4.0-3.fc36.noarch                                                                                                           7/29 
+  Проверка         : firefox-105.0.2-1.fc36.x86_64                                                                                                                8/29 
+  Проверка         : firefox-105.0.1-1.fc36.x86_64                                                                                                                9/29 
+  Проверка         : fontconfig-2.14.0-3.fc36.i686                                                                                                               10/29 
+  Проверка         : fontconfig-2.14.0-1.fc36.i686                                                                                                               11/29 
+  Проверка         : fontconfig-2.14.0-3.fc36.x86_64                                                                                                             12/29 
+  Проверка         : fontconfig-2.14.0-1.fc36.x86_64                                                                                                             13/29 
+  Проверка         : gdk-pixbuf2-2.42.9-2.fc36.x86_64                                                                                                            14/29 
+  Проверка         : gdk-pixbuf2-2.42.9-1.fc36.x86_64                                                                                                            15/29 
+  Проверка         : gdk-pixbuf2-modules-2.42.9-2.fc36.x86_64                                                                                                    16/29 
+  Проверка         : gdk-pixbuf2-modules-2.42.9-1.fc36.x86_64                                                                                                    17/29 
+  Проверка         : kernel-devel-matched-5.19.13-200.fc36.x86_64                                                                                                18/29 
+  Проверка         : kernel-devel-matched-5.19.12-200.fc36.x86_64                                                                                                19/29 
+  Проверка         : kf5-kimageformats-5.98.0-2.fc36.x86_64                                                                                                      20/29 
+  Проверка         : kf5-kimageformats-5.98.0-1.fc36.x86_64                                                                                                      21/29 
+  Проверка         : mtools-4.0.41-1.fc36.x86_64                                                                                                                 22/29 
+  Проверка         : mtools-4.0.40-1.fc36.x86_64                                                                                                                 23/29 
+  Проверка         : kernel-5.19.9-200.fc36.x86_64                                                                                                               24/29 
+  Проверка         : kernel-core-5.19.9-200.fc36.x86_64                                                                                                          25/29 
+  Проверка         : kernel-devel-5.19.9-200.fc36.x86_64                                                                                                         26/29 
+  Проверка         : kernel-modules-5.19.9-200.fc36.x86_64                                                                                                       27/29 
+  Проверка         : kernel-modules-extra-5.19.9-200.fc36.x86_64                                                                                                 28/29 
+  Проверка         : kmod-nvidia-470xx-5.19.9-200.fc36.x86_64-3:470.141.03-1.fc36.x86_64                                                                         29/29 
+
+Обновлен:
+  copy-jdk-configs-4.1-1.fc36.noarch  firefox-105.0.2-1.fc36.x86_64             fontconfig-2.14.0-3.fc36.i686                 fontconfig-2.14.0-3.fc36.x86_64        
+  gdk-pixbuf2-2.42.9-2.fc36.x86_64    gdk-pixbuf2-modules-2.42.9-2.fc36.x86_64  kernel-devel-matched-5.19.13-200.fc36.x86_64  kf5-kimageformats-5.98.0-2.fc36.x86_64 
+  mtools-4.0.41-1.fc36.x86_64        
+Установлен:
+  kernel-5.19.13-200.fc36.x86_64                 kernel-core-5.19.13-200.fc36.x86_64   kernel-devel-5.19.13-200.fc36.x86_64   kernel-modules-5.19.13-200.fc36.x86_64  
+  kernel-modules-extra-5.19.13-200.fc36.x86_64  
+Удален:
+  kernel-5.19.9-200.fc36.x86_64              kernel-core-5.19.9-200.fc36.x86_64               kernel-devel-5.19.9-200.fc36.x86_64                                     
+  kernel-modules-5.19.9-200.fc36.x86_64      kernel-modules-extra-5.19.9-200.fc36.x86_64      kmod-nvidia-470xx-5.19.9-200.fc36.x86_64-3:470.141.03-1.fc36.x86_64     
+
+Выполнено!
+georgiy@fedora:~ $ sudo apt install mc
+sudo: apt: command not found
+georgiy@fedora:~ $ sudo dnf install mc
+Последняя проверка окончания срока действия метаданных: 0:04:33 назад, Чт 06 окт 2022 20:59:46.
+Зависимости разрешены.
+=======================================================================================================================================================================
+ Пакет                               Архитектура                          Версия                                           Репозиторий                           Размер
+=======================================================================================================================================================================
+Установка:
+ mc                                  x86_64                               1:4.8.28-2.fc36                                  updates                               1.9 M
+Установка зависимостей:
+ slang                               x86_64                               2.3.2-11.fc36                                    fedora                                379 k
+
+Результат транзакции
+=======================================================================================================================================================================
+Установка  2 Пакета
+
+Объем загрузки: 2.2 M
+Объем изменений: 8.2 M
+Все правильно? [Д/н]: y
+Загрузка пакетов:
+(1/2): slang-2.3.2-11.fc36.x86_64.rpm                                                                                                  745 kB/s | 379 kB     00:00    
+(2/2): mc-4.8.28-2.fc36.x86_64.rpm                                                                                                     2.9 MB/s | 1.9 MB     00:00    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Общий размер                                                                                                                           1.6 MB/s | 2.2 MB     00:01     
+Проверка транзакции
+Проверка транзакции успешно завершена.
+Идет проверка транзакции
+Тест транзакции проведен успешно.
+Выполнение транзакции
+  Подготовка       :                                                                                                                                               1/1 
+  Установка        : slang-2.3.2-11.fc36.x86_64                                                                                                                    1/2 
+  Установка        : mc-1:4.8.28-2.fc36.x86_64                                                                                                                     2/2 
+  Запуск скриптлета: mc-1:4.8.28-2.fc36.x86_64                                                                                                                     2/2 
+  Проверка         : slang-2.3.2-11.fc36.x86_64                                                                                                                    1/2 
+  Проверка         : mc-1:4.8.28-2.fc36.x86_64                                                                                                                     2/2 
+
+Установлен:
+  mc-1:4.8.28-2.fc36.x86_64                                                         slang-2.3.2-11.fc36.x86_64                                                        
+
+Выполнено!
+georgiy@fedora:~ $ mc
+
+georgiy@fedora:~ $ 

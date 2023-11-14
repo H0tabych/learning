@@ -1,0 +1,193 @@
+georgiy@fedora:~ $ ssh 192.168.122.240
+georgiy@192.168.122.240's password: 
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-52-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 обновлений может быть применено немедленно.
+
+Last login: Tue Nov  1 22:59:09 2022 from 192.168.122.1
+georgiy@virtual-ubuntu:~$ sudo apt update
+[sudo] пароль для georgiy: 
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Сущ:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Чтение списков пакетов… Готово            
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Может быть обновлено 3 пакета. Запустите «apt list --upgradable» для их показа.
+georgiy@virtual-ubuntu:~$ sudo apt -y install curl gnupg2 ca-certificates lsb-release
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Уже установлен пакет ca-certificates самой новой версии (20211016).
+ca-certificates помечен как установленный вручную.
+Уже установлен пакет lsb-release самой новой версии (11.1.0ubuntu4).
+lsb-release помечен как установленный вручную.
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libflashrom1 libftdi1-2
+Для их удаления используйте «sudo apt autoremove».
+Следующие НОВЫЕ пакеты будут установлены:
+  curl gnupg2
+Обновлено 0 пакетов, установлено 2 новых пакетов, для удаления отмечено 0 пакетов, и 3 пакетов не обновлено.
+Необходимо скачать 200 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 505 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.6 [194 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gnupg2 all 2.2.27-3ubuntu2.1 [5 548 B]
+Получено 200 kB за 0с (529 kB/s)       
+Выбор ранее не выбранного пакета curl.
+(Чтение базы данных … на данный момент установлено 203012 файлов и каталогов.)
+Подготовка к распаковке …/curl_7.81.0-1ubuntu1.6_amd64.deb …
+Распаковывается curl (7.81.0-1ubuntu1.6) …
+Выбор ранее не выбранного пакета gnupg2.
+Подготовка к распаковке …/gnupg2_2.2.27-3ubuntu2.1_all.deb …
+Распаковывается gnupg2 (2.2.27-3ubuntu2.1) …
+Настраивается пакет gnupg2 (2.2.27-3ubuntu2.1) …
+Настраивается пакет curl (7.81.0-1ubuntu1.6) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+georgiy@virtual-ubuntu:~$ echo "deb http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
+deb http://nginx.org/packages/ubuntu jammy nginx
+georgiy@virtual-ubuntu:~$ curl -o /tmp/nginx_signing.key https://nginx.org/keys/nginx_signing.key
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1561  100  1561    0     0   3568      0 --:--:-- --:--:-- --:--:--  3572
+georgiy@virtual-ubuntu:~$ gpg --dry-run --quiet --import --import-options import-show /tmp/nginx_signing.key
+gpg: источник блока ключей '/home/georgiy/.gnupg/pubring.kbx': Нет такого файла или каталога
+pub   rsa2048 2011-08-19 [SC] [годен до: 2024-06-14]
+      573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62
+uid                      nginx signing key <signing-key@nginx.com>
+
+georgiy@virtual-ubuntu:~$ sudo mv /tmp/nginx_signing.key /etc/apt/trusted.gpg.d/nginx_signing.asc
+georgiy@virtual-ubuntu:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease               
+Сущ:4 http://security.ubuntu.com/ubuntu jammy-security InRelease                             
+Пол:5 http://nginx.org/packages/ubuntu jammy InRelease [3 578 B]                             
+Пол:6 http://nginx.org/packages/ubuntu jammy/nginx amd64 Packages [9 594 B]
+Получено 13,2 kB за 1с (15,5 kB/s)      
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Может быть обновлено 3 пакета. Запустите «apt list --upgradable» для их показа.
+N: Пропускается получение настроенного файла «nginx/binary-i386/Packages», так как репозиторий «http://nginx.org/packages/ubuntu jammy InRelease» не поддерживает архитектуру «i386»
+georgiy@virtual-ubuntu:~$ sudo apt -y install nginx
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libflashrom1 libftdi1-2
+Для их удаления используйте «sudo apt autoremove».
+Следующие НОВЫЕ пакеты будут установлены:
+  nginx
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 3 пакетов не обновлено.
+Необходимо скачать 1 004 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 3 259 kB.
+Пол:1 http://nginx.org/packages/ubuntu jammy/nginx amd64 nginx amd64 1.22.1-1~jammy [1 004 kB]
+Получено 1 004 kB за 1с (1 415 kB/s)
+Выбор ранее не выбранного пакета nginx.
+(Чтение базы данных … на данный момент установлено 203025 файлов и каталогов.)
+Подготовка к распаковке …/nginx_1.22.1-1~jammy_amd64.deb …
+----------------------------------------------------------------------
+
+Thanks for using nginx!
+
+Please find the official documentation for nginx here:
+* https://nginx.org/en/docs/
+
+Please subscribe to nginx-announce mailing list to get
+the most important news about nginx:
+* https://nginx.org/en/support.html
+
+Commercial subscriptions for nginx are available on:
+* https://nginx.com/products/
+
+----------------------------------------------------------------------
+Распаковывается nginx (1.22.1-1~jammy) …
+Настраивается пакет nginx (1.22.1-1~jammy) …
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Обрабатываются триггеры для man-db (2.10.2-1) …
+georgiy@virtual-ubuntu:~$ nginx -version
+nginx version: nginx/1.22.1
+georgiy@virtual-ubuntu:~$ sudo dpkg -r nginx
+(Чтение базы данных … на данный момент установлено 203059 файлов и каталогов.)
+Удаляется nginx (1.22.1-1~jammy) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+georgiy@virtual-ubuntu:~$ nginx -version
+-bash: /usr/sbin/nginx: Нет такого файла или каталога
+georgiy@virtual-ubuntu:~$ sudo apt install snap
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libflashrom1 libftdi1-2
+Для их удаления используйте «sudo apt autoremove».
+Следующие НОВЫЕ пакеты будут установлены:
+  snap
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 3 пакетов не обновлено.
+Необходимо скачать 377 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 2 756 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 snap amd64 2013-11-29-11 [377 kB]
+Получено 377 kB за 0с (1 010 kB/s)
+Выбор ранее не выбранного пакета snap.
+(Чтение базы данных … на данный момент установлено 203039 файлов и каталогов.)
+Подготовка к распаковке …/snap_2013-11-29-11_amd64.deb …
+Распаковывается snap (2013-11-29-11) …
+Настраивается пакет snap (2013-11-29-11) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+georgiy@virtual-ubuntu:~$ sudo search chrome
+sudo: search: команда не найдена
+georgiy@virtual-ubuntu:~$ sudo snap search chrome
+Название               Версия                  Издатель                   Примечание  Описание
+chromeos-themes        2020-01-18-25-g765be0e  gantonayde                 -           ChromeOS GTK Themes for GTK Snaps
+chrome-log-beautifier  1.0.0                   arthursonzogni             -           An interactive terminal UI for analysing Chrome logs.
+chromium               107.0.5304.87           canonical✓                 -           Chromium web browser, open-source version of Chrome
+postman                9.31.0                  postman-inc✓               -           API Development Environment
+polar-bookshelf        1.100.13                inputneuron                -           Polar Bookshelf - Manager for web, books, PDFs + notes
+tizonia                0.22.0                  tizonia                    -           Cloud music from the Linux terminal
+imagenes               2.0.459                 ubunturox104               -           An Electron-based Google Photos client
+skrifa                 0.2.6                   hyuchia                    -           A simple word processor built with web technologies
+telemetrytv            4.1.52                  telemetrytv3               -           TelemetryTV Player
+node                   18.12.0                 iojs✓                      classic     Node.js
+vectr                  0.1.15                  vectr✓                     -           Vectr is a free graphics editor used to create vector graphics easily and intuitively.
+red-app                8.0                     keshavnrj✪                 -           Complete Youtube Desktop Applications
+orange-app             6.0                     keshavnrj✪                 -           SoundCloud Client and Downloader Desktop Applications
+vsslagent              1.18                    vssl                       -           VSSL REST api.
+joplin-arnatious       1.0.224                 arnatious                  -           Joplin is a free, open source note taking and to-do application.
+pocket-browser         1.7.0                   pocketinc                  -           An open-source browser made for privacy and going towards security!
+dashkiosk              v2.7.11                 ogra                       -           Drive a set of screens displaying dashboards
+puppetry               3.2.6                   dsheiko                    -           Puppetry - codeless end-to-end test automation, integrated with CI/CD pipeline
+reamix                 2.0.0                   vcborn                     -           A simple and useful browser based on electron.
+strimio-desktop        3.0.9                   strimio                    -           Strimio is a free media player for macOS, Windows, and Linux, that enables you to play and organize your live streams like neve
+office365webdesktop    0.7.1                   rafgui012                  -           It is a simple desktop application for Office365 of the web version for linux
+home-media-server      5.17.0                  hms                        -           Digital Media Server (UPnP, DLNA, HTTP)
+voidstar               v1.38.0                 fenoll                     -           void* casts files onto 2D/3D colored spaces for your mind blowing needs
+boxy-svg               3.89.10                 jarek-foksa                -           Scalable Vector Graphics (SVG) editor
+enpass                 6.6.3.835               chrismin13                 -           Offline Password Manager and Secure Vault. Saves and fill in all your passwords, cards and other details.
+wise-highlights        1.1.5                   informawise                -           Manage your reading highlights.
+accountable2you        6.0.23                  a2udeveloper               -           Accountable2You monitors device activity and sends reports to your chosen partner to help you stay accountable.
+bitgesell-wallet       0.9.5                   epexa                      -           Bitgesell Wallet - сross-platform wallet for BGL cryptocurrency.
+atimerecording         1.4.8                   gerold-gp-softwaretechnik  -           Free online time tracking for work, self-employed, sports and leisure.
+appspace-app           2.53.0                  appspace-cloud-ops         -           Reach your workforce with digital signs and more.
+gpassmanager           1.1.0                   injamulmd                  -           CommandLine Password Manager
+champ                  0.0.1~git               si-dz0ny                   -           Plex 2nd screen player
+vtest-chrome           1.1.1                   ms-viojh                   -           vtest-chrome
+vioj-chrome-test1      1.1.2                   ms-viojh                   -           Snapcraft Forum
+georgiy@virtual-ubuntu:~$ sudo snap install chromium
+chromium 107.0.5304.87 от Canonical✓ установлен
+georgiy@virtual-ubuntu:~$ chromium
+[5461:5461:1101/231135.069040:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
+[5461:5461:1101/231135.070209:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
+georgiy@virtual-ubuntu:~$ chromium -version
+Chromium 107.0.5304.87 snap
+georgiy@virtual-ubuntu:~$ sudo iptables -P INPUT DROP
+georgiy@virtual-ubuntu:~$ su^C
+georgiy@virtual-ubuntu:~$ # локально включил кодключения
+georgiy@virtual-ubuntu:~$ sudo iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
+georgiy@virtual-ubuntu:~$ sudo iptables -A INPUT -i eth0 -p tcp --dport 22 -j ACCEPT
+georgiy@virtual-ubuntu:~$ sudo iptables -A INPUT -i eth0 -p tcp --dport 8080 -j ACCEPT
+georgiy@virtual-ubuntu:~$ sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+georgiy@virtual-ubuntu:~$ 

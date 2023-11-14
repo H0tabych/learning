@@ -1,0 +1,497 @@
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 132
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ echo > file_test
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 136
+-rw-r--r--. 1 georgiy georgiy     1 окт 23 14:45  file_test
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ rm file_test 
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat /etc/* 1>output_etc 2>errors
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 1264
+-rw-r--r--. 1 georgiy georgiy    7640 окт 23 14:48  errors
+-rw-r--r--. 1 georgiy georgiy   53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy    7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy   25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy     437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy   11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy    4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy    9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy    6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 1149441 окт 23 14:48  output_etc
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ rm output_etc errors 
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l | sort | uniq
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 _Linux workstation - lesson 2 - examples.sh
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26 linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 _Linux workstation - lesson 1 - examples.sh
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 _Linux workstation - lesson 3 - examples.sh
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05 linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 _Linux workstation - lesson 5 - examples.sh
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29 linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 _Linux workstation - lesson 4 - examples.sh
+итого 132
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l /etc | sort | uniq
+----------. 1 root root     1320 окт 17 23:27 shadow
+----------. 1 root root     1424 окт 17 23:15 shadow-
+----------. 1 root root      799 окт 17 23:27 gshadow-
+----------. 1 root root      806 окт 17 23:31 gshadow
+drwx------. 1 root root       16 июл 11 22:01 ipsec.d
+drwx------. 1 root root       18 авг 27 00:28 sssd
+drwx------. 1 root root      374 окт 17 23:35 grub.d
+drwx------. 1 root root      506 окт 10 17:31 libvirt
+drwx------. 1 root root       56 мая  5 00:25 nftables
+drwxr-x---. 1 root root        0 янв 22  2022 sudoers.d
+drwxr-x---. 1 root root      108 сен 14 11:27 audit
+drwxr-x---. 1 root root       20 окт 10 12:51 dhcp
+drwxr-x---. 1 root root      298 июл  7 18:08 firewalld
+drwxr-xr-x. 1 root lp        444 окт 23 14:26 cups
+drwxr-xr-x. 1 root root        0 авг  1 13:58 gnupg
+drwxr-xr-x. 1 root root        0 авг  2 15:32 rpm
+drwxr-xr-x. 1 root root        0 авг  2 17:35 nvidia
+drwxr-xr-x. 1 root root        0 авг  9 16:57 statetab.d
+drwxr-xr-x. 1 root root        0 авг  9 18:36 exports.d
+drwxr-xr-x. 1 root root        0 июл 14 16:30 binfmt.d
+drwxr-xr-x. 1 root root        0 июл 14 16:30 modules-load.d
+drwxr-xr-x. 1 root root        0 июл 14 16:30 tmpfiles.d
+drwxr-xr-x. 1 root root        0 июл 20 11:24 motd.d
+drwxr-xr-x. 1 root root        0 июл 23 14:50 ceph
+drwxr-xr-x. 1 root root        0 июл 27 11:17 rsyslog.d
+drwxr-xr-x. 1 root root        0 июл  8 23:56 dnsmasq.d
+drwxr-xr-x. 1 root root        0 июн 23 15:13 cron.monthly
+drwxr-xr-x. 1 root root        0 июн 23 15:13 cron.weekly
+drwxr-xr-x. 1 root root        0 мая 31 12:59 gcrypt
+drwxr-xr-x. 1 root root        0 окт 12 20:40 koji.conf.d
+drwxr-xr-x. 1 root root        0 окт 14 21:58 issue.d
+drwxr-xr-x. 1 root root        0 окт  5 12:38 chkconfig.d
+drwxr-xr-x. 1 root root        0 окт  7 15:06 gdbinit.d
+drwxr-xr-x. 1 root root        0 сен 26 17:47 dracut.conf.d
+drwxr-xr-x. 1 root root        0 фев  3  2022 jvm
+drwxr-xr-x. 1 root root        0 фев  3  2022 jvm-common
+drwxr-xr-x. 1 root root        0 янв 20  2022 depmod.d
+drwxr-xr-x. 1 root root        0 янв 20  2022 libpaper.d
+drwxr-xr-x. 1 root root        0 янв 21  2022 ocfs2
+drwxr-xr-x. 1 root root        0 янв 21  2022 popt.d
+drwxr-xr-x. 1 root root        0 янв 21  2022 terminfo
+drwxr-xr-x. 1 root root      104 мая  5 00:25 udisks2
+drwxr-xr-x. 1 root root      104 мая  5 00:27 ssh
+drwxr-xr-x. 1 root root      106 июн 16 09:13 krb5.conf.d
+drwxr-xr-x. 1 root root      112 окт  6 20:51 redhat-lsb
+drwxr-xr-x. 1 root root      118 окт 10 17:31 X11
+drwxr-xr-x. 1 root root      118 сен 14 12:27 pki
+drwxr-xr-x. 1 root root      126 мая  5 00:26 abrt
+drwxr-xr-x. 1 root root       12 июн 16 09:13 gss
+drwxr-xr-x. 1 root root       12 сен 16 11:18 libblockdev
+drwxr-xr-x. 1 root root      144 окт 10 17:31 bash_completion.d
+drwxr-xr-x. 1 root root       14 июл  1 15:58 cron.d
+drwxr-xr-x. 1 root root       14 мая  5 00:24 xml
+drwxr-xr-x. 1 root root       14 мая  5 00:25 strongswan
+drwxr-xr-x. 1 root root       14 янв 21  2022 OpenCL
+drwxr-xr-x. 1 root root       14 янв 21  2022 pkcs11
+drwxr-xr-x. 1 root root      160 авг 11 20:47 NetworkManager
+drwxr-xr-x. 1 root root      162 мая  5 00:25 iproute2
+drwxr-xr-x. 1 root root      162 сен 14 11:23 dnf
+drwxr-xr-x. 1 root root       16 июн 23 15:13 cron.hourly
+drwxr-xr-x. 1 root root      176 окт 12 20:20 fwupd
+drwxr-xr-x. 1 root root      188 окт 12 20:21 ld.so.conf.d
+drwxr-xr-x. 1 root root       18 авг 11 01:19 mdevctl.d
+drwxr-xr-x. 1 root root       18 июл 14 17:21 flatpak
+drwxr-xr-x. 1 root root       18 июл 22 23:43 ostree
+drwxr-xr-x. 1 root root       18 сен 14 11:24 bluetooth
+drwxr-xr-x. 1 root root       18 янв 20  2022 dconf
+drwxr-xr-x. 1 root root       20 авг  9 16:57 opt
+drwxr-xr-x. 1 root root       20 окт 14 21:58 swid
+drwxr-xr-x. 1 root root       22 июл 15 13:02 UPower
+drwxr-xr-x. 1 root root       22 июл 26 15:25 kdump
+drwxr-xr-x. 1 root root       22 июн 13 12:39 reader.conf.d
+drwxr-xr-x. 1 root root       22 мая  5 00:25 iscsi
+drwxr-xr-x. 1 root root       22 мая  5 00:25 openal
+drwxr-xr-x. 1 root root       22 окт 10 17:31 qemu
+drwxr-xr-x. 1 root root       22 янв 25  2022 pulse
+drwxr-xr-x. 1 root root      232 сен 14 16:46 authselect
+drwxr-xr-x. 1 root root      242 сен 14 11:25 my.cnf.d
+drwxr-xr-x. 1 root root      244 сен 14 19:11 libreport
+drwxr-xr-x. 1 root root       24 авг 12 12:10 glvnd
+drwxr-xr-x. 1 root root       24 авг 27 00:28 cifs-utils
+drwxr-xr-x. 1 root root       24 июн 10 16:36 openvpn
+drwxr-xr-x. 1 root root       24 мая  5 00:25 geoclue
+drwxr-xr-x. 1 root root      260 сен 14 11:25 vmware-tools
+drwxr-xr-x. 1 root root       26 июл  6 19:04 libnl
+drwxr-xr-x. 1 root root       26 сен 14 11:24 debuginfod
+drwxr-xr-x. 1 root root       26 янв 21  2022 pkgconfig
+drwxr-xr-x. 1 root root       28 июл 14 16:30 sysctl.d
+drwxr-xr-x. 1 root root       28 мая  5 00:25 plymouth
+drwxr-xr-x. 1 root root       28 окт 10 17:31 zfs-fuse
+drwxr-xr-x. 1 root root       28 окт 13 18:06 cron.daily
+drwxr-xr-x. 1 root root       28 сен 30 07:19 openldap
+drwxr-xr-x. 1 root root       28 янв 20  2022 kde
+drwxr-xr-x. 1 root root      290 окт 10 17:31 logrotate.d
+drwxr-xr-x. 1 root root       30 мая  5 00:27 dnfdragora
+drwxr-xr-x. 1 root root      314 сен 14 11:24 ppp
+drwxr-xr-x. 1 root root     3166 окт  5 12:38 alternatives
+drwxr-xr-x. 1 root root       32 мая  5 00:25 fonts
+drwxr-xr-x. 1 root root       32 янв 22  2022 signon-ui
+drwxr-xr-x. 1 root root      336 сен 14 11:24 systemd
+drwxr-xr-x. 1 root root       34 сен 14 13:48 sddm.conf.d
+drwxr-xr-x. 1 root root       36 янв 27  2022 groff
+drwxr-xr-x. 1 root root      372 фев  6  2022 libibverbs.d
+drwxr-xr-x. 1 root root       38 мая  5 00:25 wpa_supplicant
+drwxr-xr-x. 1 root root       38 мая  5 00:27 mcelog
+drwxr-xr-x. 1 root root       40 сен 14 16:45 rpmlint
+drwxr-xr-x. 1 root root       40 сен  6 18:53 cupshelpers
+drwxr-xr-x. 1 root root       42 окт 10 17:31 sasl2
+drwxr-xr-x. 1 root root       42 сен 14 11:24 rwtab.d
+drwxr-xr-x. 1 root root       44 авг 24 12:25 ndctl.conf.d
+drwxr-xr-x. 1 root root       44 авг  9 16:57 pm
+drwxr-xr-x. 1 root root       44 мая  5 00:26 chromium
+drwxr-xr-x. 1 root root       46 авг 12 12:10 egl
+drwxr-xr-x. 1 root root       46 мая  5 00:25 java
+drwxr-xr-x. 1 root root       46 сен 14 11:23 vpnc
+drwxr-xr-x. 1 root root       46 сен 19 04:30 xl2tpd
+drwxr-xr-x. 1 root root       46 сен 24 00:58 unbound
+drwxr-xr-x. 1 root root      488 сен 14 11:24 security
+drwxr-xr-x. 1 root root      504 окт 20 00:03 sysconfig
+drwxr-xr-x. 1 root root      504 сен 14 12:27 rpmdevtools
+drwxr-xr-x. 1 root root       50 сен 14 14:21 default
+drwxr-xr-x. 1 root root       52 сен 14 12:27 kernel
+drwxr-xr-x. 1 root root       52 сен 19 16:44 speech-dispatcher
+drwxr-xr-x. 1 root root      538 сен 16 00:02 pam.d
+drwxr-xr-x. 1 root root       56 сен 23 22:48 qemu-ga
+drwxr-xr-x. 1 root root       58 окт  6 20:51 lsb-release.d
+drwxr-xr-x. 1 root root       58 сен 14 11:24 tpm2-tss
+drwxr-xr-x. 1 root root       60 сен 16 17:54 udev
+drwxr-xr-x. 1 root root      622 мая  5 00:25 sgml
+drwxr-xr-x. 1 root root       62 сен 14 11:24 samba
+drwxr-xr-x. 1 root root       66 мая  5 00:25 avahi
+drwxr-xr-x. 1 root root      684 окт 10 17:31 profile.d
+drwxr-xr-x. 1 root root       70 апр 28 16:19 crypto-policies
+drwxr-xr-x. 1 root root       70 мая 31 21:18 alsa
+drwxr-xr-x. 1 root root      716 окт 23 14:35 xdg
+drwxr-xr-x. 1 root root       74 фев 16  2022 vulkan
+drwxr-xr-x. 1 root root      762 окт 10 17:31 modprobe.d
+drwxr-xr-x. 1 root root       76 июл  6 20:52 brltty
+drwxr-xr-x. 1 root root       80 авг  9 16:57 skel
+drwxr-xr-x. 1 root root       80 мая  5 00:24 libssh
+drwxr-xr-x. 1 root root       80 мая  5 00:26 sddm
+drwxr-xr-x. 1 root root       80 мая  5 00:27 sos
+drwxr-xr-x. 1 root root       80 окт 11 16:30 dbus-1
+drwxr-xr-x. 1 root root       82 окт  5 12:38 rc.d
+drwxr-xr-x. 1 root root       82 сен 30 10:43 selinux
+drwxr-xr-x. 1 root root       84 мая  5 00:25 polkit-1
+drwxr-xr-x. 1 root root       86 окт  7 13:34 wireplumber
+drwxr-xr-x. 1 root root       86 сен 15 23:59 httpd
+drwxr-xr-x. 1 root root      878 окт 20 00:04 yum.repos.d
+drwxr-xr-x. 1 root root       88 сен 14 11:25 smartmontools
+drwxr-xr-x. 1 root root        8 авг 24 12:25 ndctl
+drwxr-xr-x. 1 root root        8 окт  5 14:43 firefox
+drwxr-xr-x. 1 root root       90 сен 14 11:24 ssl
+drwxr-xr-x. 1 root root       92 мая  5 00:25 lvm
+drwxr-xr-x. 1 root root       92 мая  5 00:27 PackageKit
+drwxr-xr-x. 1 root root       94 сен 14 11:27 request-key.d
+drwxr-xr-x. 1 root root       98 сен 14 11:27 gssproxy
+lrwxrwxrwx. 1 root root       10 окт  5 12:38 rc0.d -> rc.d/rc0.d
+lrwxrwxrwx. 1 root root       10 окт  5 12:38 rc1.d -> rc.d/rc1.d
+lrwxrwxrwx. 1 root root       10 окт  5 12:38 rc2.d -> rc.d/rc2.d
+lrwxrwxrwx. 1 root root       10 окт  5 12:38 rc3.d -> rc.d/rc3.d
+lrwxrwxrwx. 1 root root       10 окт  5 12:38 rc4.d -> rc.d/rc4.d
+lrwxrwxrwx. 1 root root       10 окт  5 12:38 rc5.d -> rc.d/rc5.d
+lrwxrwxrwx. 1 root root       10 окт  5 12:38 rc6.d -> rc.d/rc6.d
+lrwxrwxrwx. 1 root root       11 окт  5 12:38 init.d -> rc.d/init.d
+lrwxrwxrwx. 1 root root       14 окт 14 21:58 redhat-release -> fedora-release
+lrwxrwxrwx. 1 root root       14 окт 14 21:58 system-release -> fedora-release
+lrwxrwxrwx. 1 root root       16 мая  2 21:40 opensc-x86_64.conf -> /etc/opensc.conf
+lrwxrwxrwx. 1 root root       16 окт 14 21:58 issue -> ../usr/lib/issue
+lrwxrwxrwx. 1 root root       19 сен 14 10:41 mtab -> ../proc/self/mounts
+lrwxrwxrwx. 1 root root       20 окт 14 21:58 issue.net -> ../usr/lib/issue.net
+lrwxrwxrwx. 1 root root       21 окт 14 21:58 os-release -> ../usr/lib/os-release
+lrwxrwxrwx. 1 root root       22 окт 12 21:24 grub2.cfg -> ../boot/grub2/grub.cfg
+lrwxrwxrwx. 1 root root       22 окт 12 21:24 grub2-efi.cfg -> ../boot/grub2/grub.cfg
+lrwxrwxrwx. 1 root root       25 окт 14 21:58 fedora-release -> ../usr/lib/fedora-release
+lrwxrwxrwx. 1 root root       29 окт 14 21:58 system-release-cpe -> ../usr/lib/system-release-cpe
+lrwxrwxrwx. 1 root root       29 сен 14 16:46 nsswitch.conf -> /etc/authselect/nsswitch.conf
+lrwxrwxrwx. 1 root root       30 янв 27  2022 extlinux.conf -> ../boot/extlinux/extlinux.conf
+lrwxrwxrwx. 1 root root       35 сен 14 10:39 localtime -> ../usr/share/zoneinfo/Europe/Moscow
+lrwxrwxrwx. 1 root root       39 сен 14 11:28 resolv.conf -> ../run/systemd/resolve/stub-resolv.conf
+lrwxrwxrwx. 1 root root       56 апр  4  2022 favicon.png -> /usr/share/icons/hicolor/16x16/apps/fedora-logo-icon.png
+-r--r-----. 1 root root     4375 окт 17 23:26 sudoers
+-r--r--r--. 1 root root       33 сен 14 10:37 machine-id
+-rw-------. 1 root root        0 сен 14 10:37 crypttab
+-rw-------. 1 root root       31 июл 11 22:01 ipsec.secrets
+-rw-r-----. 1 root brlapi     33 окт 10 17:31 brlapi.key
+-rw-r-----. 1 root chrony    540 авг 29 16:04 chrony.keys
+-rw-r-----. 1 root root      191 авг 30 00:23 libaudit.conf
+-rw-r-----. 1 root root     4571 янв 22  2022 sudo.conf
+-rw-r-----. 1 root tss      7046 янв 22  2022 tcsd.conf
+-rw-r--r--. 1 root root        0 июл  1 15:58 cron.deny
+-rw-r--r--. 1 root root        0 июл 20 10:53 exports
+-rw-r--r--. 1 root root        0 июл 20 10:53 motd
+-rw-r--r--. 1 root root        0 июл 20 11:24 environment
+-rw-r--r--. 1 root root        0 сен 14 13:48 sddm.conf
+-rw-r--r--. 1 root root        0 янв 22  2022 odbc.ini
+-rw-r--r--. 1 root root     1087 июл 20 10:53 csh.login
+-rw-r--r--. 1 root root    11181 янв 21  2022 nanorc
+-rw-r--r--. 1 root root      111 янв 20  2022 magic
+-rw-r--r--. 1 root root      117 сен 26 17:47 dracut.conf
+-rw-r--r--. 1 root root     1183 окт 11 17:08 virc
+-rw-r--r--. 1 root root     1362 июл 20 10:53 ethertypes
+-rw-r--r--. 1 root root     1371 авг 29 16:04 chrony.conf
+-rw-r--r--. 1 root root     1401 июл 20 10:53 csh.cshrc
+-rw-r--r--. 1 root root     1468 авг  9 18:36 nfs.conf
+-rw-r--r--. 1 root root     1523 янв 22  2022 usb_modeswitch.conf
+-rw-r--r--. 1 root root     1529 июл 20 10:53 aliases
+-rw-r--r--. 1 root root     1560 окт 12 20:40 koji.conf
+-rw-r--r--. 1 root root     1634 авг 22 19:26 rpc
+-rw-r--r--. 1 root root     1670 июл 11 22:01 ipsec.conf
+-rw-r--r--. 1 root root     1689 июн 13 19:32 uresourced.conf
+-rw-r--r--. 1 root root       16 сен 14 10:39 adjtime
+-rw-r--r--. 1 root root     1787 янв 20  2022 request-key.conf
+-rw-r--r--. 1 root root     1803 сен 17  2018 signond.conf
+-rw-r--r--. 1 root root      180 апр 27 21:26 swtpm-localca.conf
+-rw-r--r--. 1 root root     1945 июл 20 10:53 profile
+-rw-r--r--. 1 root root     1968 янв 20  2022 mail.rc
+-rw-r--r--. 1 root root        1 мар 31  2022 at.deny
+-rw-r--r--. 1 root root        1 сен 14 10:39 hostname
+-rw-r--r--. 1 root root     2026 янв 22  2022 odbcinst.ini
+-rw-r--r--. 1 root root      202 июн 11 12:02 my.cnf
+-rw-r--r--. 1 root root      204 июн 14 16:16 kderc
+-rw-r--r--. 1 root root       20 фев 24  2022 fprintd.conf
+-rw-r--r--. 1 root root      216 фев 21  2022 sestatus.conf
+-rw-r--r--. 1 root root       21 окт 17 23:27 subgid
+-rw-r--r--. 1 root root       21 окт 17 23:27 subuid
+-rw-r--r--. 1 root root      233 июл 20 10:53 printcap
+-rw-r--r--. 1 root root     2393 фев 23  2022 libuser.conf
+-rw-r--r--. 1 root root     2484 янв 21  2022 nilfs_cleanerd.conf
+-rw-r--r--. 1 root root     2620 сен 20 10:14 mtools.conf
+-rw-r--r--. 1 root root     2638 июл 20 10:53 bashrc
+-rw-r--r--. 1 root root      263 апр  4  2021 passwdqc.conf
+-rw-r--r--. 1 root root      265 окт  7 15:06 gdbinit
+-rw-r--r--. 1 root root      269 мая  6 15:03 anthy-unicode.conf
+-rw-r--r--. 1 root root      271 июн 14 16:16 kde4rc
+-rw-r--r--. 1 root root     2723 окт 17 23:27 passwd
+-rw-r--r--. 1 root root      272 апр 27  2021 mailcap
+-rw-r--r--. 1 root root     2768 окт 17 23:12 passwd-
+-rw-r--r--. 1 root root    27981 июл  8 23:56 dnsmasq.conf
+-rw-r--r--. 1 root root     2872 янв 21  2022 pinforc
+-rw-r--r--. 1 root root      289 апр 27 21:26 swtpm_setup.conf
+-rw-r--r--. 1 root root       28 авг 22 20:16 ld.so.conf
+-rw-r--r--. 1 root root    29842 июл  6 20:49 brltty.conf
+-rw-r--r--. 1 root root     3223 июл 27 11:10 rsyslog.conf
+-rw-r--r--. 1 root root     3604 авг  9 18:36 nfsmount.conf
+-rw-r--r--. 1 root root      375 сен 22 19:12 trusted-key.key
+-rw-r--r--. 1 root root      386 июл 20 10:53 hosts
+-rw-r--r--. 1 root root       38 янв 20  2022 fuse.conf
+-rw-r--r--. 1 root root     4017 окт 11 17:08 vimrc
+-rw-r--r--. 1 root root      439 мая  2 21:39 opensc.conf
+-rw-r--r--. 1 root root      449 июл 14 16:30 sysctl.conf
+-rw-r--r--. 1 root root      451 июн 23 15:13 crontab
+-rw-r--r--. 1 root root      458 сен 27 12:47 rsyncd.conf
+-rw-r--r--. 1 root root       45 июн 14 16:16 Trolltech.conf
+-rw-r--r--. 1 root root       45 окт 17 23:12 subgid-
+-rw-r--r--. 1 root root       45 окт 17 23:12 subuid-
+-rw-r--r--. 1 root root     4687 авг  8 17:53 DIR_COLORS
+-rw-r--r--. 1 root root     4769 авг  8 17:53 DIR_COLORS.lightbgcolor
+-rw-r--r--. 1 root root      490 июл 14 16:30 inittab
+-rw-r--r--. 1 root root     4925 мар 15  2022 wgetrc
+-rw-r--r--. 1 root root      493 апр 16  2021 logrotate.conf
+-rw-r--r--. 1 root root     5122 июл 26 15:25 makedumpfile.conf.sample
+-rw-r--r--. 1 root root      513 авг 17 14:57 updatedb.conf
+-rw-r--r--. 1 root root       51 мар  7  2022 vdpau_wrapper.cfg
+-rw-r--r--. 1 root root     5235 фев  8  2022 man_db.conf
+-rw-r--r--. 1 root root      535 авг  8 17:20 bindresvport.blacklist
+-rw-r--r--. 1 root root      541 июл  1 15:58 anacrontab
+-rw-r--r--. 1 root root       55 июл  8 19:48 asound.conf
+-rw-r--r--. 1 root root     5799 авг  9 18:36 idmapd.conf
+-rw-r--r--. 1 root root       58 июл 20 10:53 networks
+-rw-r--r--. 1 root root       59 сен 14 10:38 machine-info
+-rw-r--r--. 1 root root     6568 июл 20 10:53 protocols
+-rw-r--r--. 1 root root       66 июл 20 10:53 filesystems
+-rw-r--r--. 1 root root       68 мая  5 00:25 shells
+-rw-r--r--. 1 root root       68 янв 20  2022 papersize
+-rw-r--r--. 1 root root    69857 апр 27  2021 mime.types
+-rw-r--r--. 1 root root   701745 июл 20 10:53 services
+-rw-r--r--. 1 root root      767 авг  8 17:20 netconfig
+-rw-r--r--. 1 root root       76 апр 27 19:56 swtpm-localca.options
+-rw-r--r--. 1 root root    78055 янв 20  2022 jwhois.conf
+-rw-r--r--. 1 root root      782 янв 20  2022 mke2fs.conf
+-rw-r--r--. 1 root root      817 янв 20  2022 xattr.conf
+-rw-r--r--. 1 root root      833 авг 22 20:44 appstream.conf
+-rw-r--r--. 1 root root     8676 сен 26 10:39 login.defs
+-rw-r--r--. 1 root root      880 июн 16 09:08 krb5.conf
+-rw-r--r--. 1 root root     8892 сен 14 11:24 kdump.conf
+-rw-r--r--. 1 root root      938 сен  9  2019 ts.conf
+-rw-r--r--. 1 root root    94283 окт 23 14:36 ld.so.cache
+-rw-r--r--. 1 root root      943 июл 20 10:53 inputrc
+-rw-r--r--. 1 root root       94 янв 20  2022 GREP_COLORS
+-rw-r--r--. 1 root root       96 янв 20  2022 timidity++.cfg
+-rw-r--r--. 1 root root      985 окт 17 23:27 group-
+-rw-r--r--. 1 root root      992 окт 17 23:31 group
+-rw-r--r--. 1 root root        9 июл 20 10:53 host.conf
+-rw-rw-r--. 1 root root     1017 сен 14 11:09 fstab
+-rw-rw-r--. 1 root root       19 сен 14 10:39 locale.conf
+-rw-rw-r--. 1 root root       37 сен 14 10:39 vconsole.conf
+итого 1588
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l /etc | cut -b -10 | sort | uniq
+----------
+drwx------
+drwxr-x---
+drwxr-xr-x
+lrwxrwxrwx
+-r--r-----
+-r--r--r--
+-rw-------
+-rw-r-----
+-rw-r--r--
+-rw-rw-r--
+итого
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l /etc | cut -f 1 -d " " | sort | uniq
+----------.
+drwx------.
+drwxr-x---.
+drwxr-xr-x.
+lrwxrwxrwx.
+-r--r-----.
+-r--r--r--.
+-rw-------.
+-rw-r-----.
+-rw-r--r--.
+-rw-rw-r--.
+итого
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l /etc | cut -f 2 -d " " | sort | uniq
+1
+1588
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l /etc | cut -f 1 -d " " | sort | uniq
+----------.
+drwx------.
+drwxr-x---.
+drwxr-xr-x.
+lrwxrwxrwx.
+-r--r-----.
+-r--r--r--.
+-rw-------.
+-rw-r-----.
+-rw-r--r--.
+-rw-rw-r--.
+итого
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ssh georgiy@192.168.122.200
+Enter passphrase for key '/home/georgiy/.ssh/id_rsa': 
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-50-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+32 обновления может быть применено немедленно.
+16 из этих обновлений, являются стандартными обновлениями безопасности.
+Чтобы просмотреть дополнительные обновления выполните: apt list --upgradable
+
+Last login: Mon Oct 10 19:28:50 2022 from 192.168.122.1
+georgiy@VirtualUbuntu:~$ sudo vim /etc/ss
+ssh/ ssl/ 
+georgiy@VirtualUbuntu:~$ sudo vim /etc/ssh/sshd_config
+[sudo] пароль для georgiy: 
+georgiy@VirtualUbuntu:~$ systemctl restart sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Чтобы перезапустить «ssh.service», необходимо пройти аутентификацию.
+Authenticating as: georgiy,,, (georgiy)
+Password: 
+polkit-agent-helper-1: pam_authenticate failed: Authentication failure
+==== AUTHENTICATION FAILED ===
+Failed to restart sshd.service: Access denied
+See system logs and 'systemctl status sshd.service' for details.
+georgiy@VirtualUbuntu:~$ systemctl restart sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Чтобы перезапустить «ssh.service», необходимо пройти аутентификацию.
+Authenticating as: georgiy,,, (georgiy)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+georgiy@VirtualUbuntu:~$ systemctl reload sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Чтобы заставить «ssh.service» перечитать конфигурацию, необходимо пройти аутентификацию.
+Authenticating as: georgiy,,, (georgiy)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+georgiy@VirtualUbuntu:~$ sudo vim /etc/ssh/sshd_config
+georgiy@VirtualUbuntu:~$ systemctl reload sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Чтобы заставить «ssh.service» перечитать конфигурацию, необходимо пройти аутентификацию.
+Authenticating as: georgiy,,, (georgiy)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+georgiy@VirtualUbuntu:~$ exit
+выход
+Connection to 192.168.122.200 closed.
+
+# service reload - сохраняет PID процесса
+# service restart - пересоздаёт процесс, PID меняется
+
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat > file_name
+123
+123
+ewrf
+fd
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ # Передали с помощью ctrl+d сигнал End of file (EOF)
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo dnf install mc
+[sudo] пароль для georgiy: 
+Последняя проверка окончания срока действия метаданных: 0:24:58 назад, Вс 23 окт 2022 14:50:30.
+Зависимости разрешены.
+=======================================================================================================================================================================
+ Пакет                               Архитектура                          Версия                                           Репозиторий                           Размер
+=======================================================================================================================================================================
+Установка:
+ mc                                  x86_64                               1:4.8.28-2.fc36                                  updates                               1.9 M
+Установка зависимостей:
+ slang                               x86_64                               2.3.2-11.fc36                                    fedora                                379 k
+
+Результат транзакции
+=======================================================================================================================================================================
+Установка  2 Пакета
+
+Объем загрузки: 2.2 M
+Объем изменений: 8.2 M
+Все правильно? [Д/н]: y
+Загрузка пакетов:
+(1/2): slang-2.3.2-11.fc36.x86_64.rpm                                                                                                  846 kB/s | 379 kB     00:00    
+(2/2): mc-4.8.28-2.fc36.x86_64.rpm                                                                                                     1.8 MB/s | 1.9 MB     00:01    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Общий размер                                                                                                                           992 kB/s | 2.2 MB     00:02     
+Проверка транзакции
+Проверка транзакции успешно завершена.
+Идет проверка транзакции
+Тест транзакции проведен успешно.
+Выполнение транзакции
+  Подготовка       :                                                                                                                                               1/1 
+  Установка        : slang-2.3.2-11.fc36.x86_64                                                                                                                    1/2 
+  Установка        : mc-1:4.8.28-2.fc36.x86_64                                                                                                                     2/2 
+  Запуск скриптлета: mc-1:4.8.28-2.fc36.x86_64                                                                                                                     2/2 
+  Проверка         : slang-2.3.2-11.fc36.x86_64                                                                                                                    1/2 
+  Проверка         : mc-1:4.8.28-2.fc36.x86_64                                                                                                                     2/2 
+
+Установлен:
+  mc-1:4.8.28-2.fc36.x86_64                                                         slang-2.3.2-11.fc36.x86_64                                                        
+
+Выполнено!
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ps aux | grep mc
+root         830  0.0  0.0   3284  1200 ?        Ss   14:26   0:00 /usr/sbin/mcelog --daemon --foreground
+qemu        8613 32.4 26.9 6746104 2156804 ?     Sl   15:00   5:14 /usr/bin/qemu-system-x86_64 -name guest=ubuntu22.04,debug-threads=on -S -object {"qom-type":"secret","id":"masterKey0","format":"raw","file":"/var/lib/libvirt/qemu/domain-1-ubuntu22.04/master-key.aes"} -machine pc-q35-6.2,usb=off,vmport=off,dump-guest-core=off,memory-backend=pc.ram -accel kvm -cpu host,migratable=on -m 2048 -object {"qom-type":"memory-backend-ram","id":"pc.ram","size":2147483648} -overcommit mem-lock=off -smp 2,sockets=2,cores=1,threads=1 -uuid d501a788-3d64-4e06-92c2-3e53a9fac136 -no-user-config -nodefaults -chardev socket,id=charmonitor,fd=29,server=on,wait=off -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc,driftfix=slew -global kvm-pit.lost_tick_policy=delay -no-hpet -no-shutdown -global ICH9-LPC.disable_s3=1 -global ICH9-LPC.disable_s4=1 -boot strict=on -device pcie-root-port,port=16,chassis=1,id=pci.1,bus=pcie.0,multifunction=on,addr=0x2 -device pcie-root-port,port=17,chassis=2,id=pci.2,bus=pcie.0,addr=0x2.0x1 -device pcie-root-port,port=18,chassis=3,id=pci.3,bus=pcie.0,addr=0x2.0x2 -device pcie-root-port,port=19,chassis=4,id=pci.4,bus=pcie.0,addr=0x2.0x3 -device pcie-root-port,port=20,chassis=5,id=pci.5,bus=pcie.0,addr=0x2.0x4 -device pcie-root-port,port=21,chassis=6,id=pci.6,bus=pcie.0,addr=0x2.0x5 -device pcie-root-port,port=22,chassis=7,id=pci.7,bus=pcie.0,addr=0x2.0x6 -device pcie-root-port,port=23,chassis=8,id=pci.8,bus=pcie.0,addr=0x2.0x7 -device pcie-root-port,port=24,chassis=9,id=pci.9,bus=pcie.0,multifunction=on,addr=0x3 -device pcie-root-port,port=25,chassis=10,id=pci.10,bus=pcie.0,addr=0x3.0x1 -device pcie-root-port,port=26,chassis=11,id=pci.11,bus=pcie.0,addr=0x3.0x2 -device pcie-root-port,port=27,chassis=12,id=pci.12,bus=pcie.0,addr=0x3.0x3 -device pcie-root-port,port=28,chassis=13,id=pci.13,bus=pcie.0,addr=0x3.0x4 -device pcie-root-port,port=29,chassis=14,id=pci.14,bus=pcie.0,addr=0x3.0x5 -device qemu-xhci,p2=15,p3=15,id=usb,bus=pci.2,addr=0x0 -device virtio-serial-pci,id=virtio-serial0,bus=pci.3,addr=0x0 -blockdev {"driver":"file","filename":"/var/lib/libvirt/images/ubuntu22.04.qcow2","node-name":"libvirt-2-storage","auto-read-only":true,"discard":"unmap"} -blockdev {"node-name":"libvirt-2-format","read-only":false,"discard":"unmap","driver":"qcow2","file":"libvirt-2-storage","backing":null} -device virtio-blk-pci,bus=pci.4,addr=0x0,drive=libvirt-2-format,id=virtio-disk0,bootindex=1 -device ide-cd,bus=ide.0,id=sata0-0-0 -netdev tap,fd=30,id=hostnet0,vhost=on,vhostfd=32 -device virtio-net-pci,netdev=hostnet0,id=net0,mac=52:54:00:72:67:fd,bus=pci.1,addr=0x0 -chardev pty,id=charserial0 -device isa-serial,chardev=charserial0,id=serial0,index=0 -chardev socket,id=charchannel0,fd=28,server=on,wait=off -device virtserialport,bus=virtio-serial0.0,nr=1,chardev=charchannel0,id=channel0,name=org.qemu.guest_agent.0 -chardev spicevmc,id=charchannel1,name=vdagent -device virtserialport,bus=virtio-serial0.0,nr=2,chardev=charchannel1,id=channel1,name=com.redhat.spice.0 -device usb-tablet,id=input0,bus=usb.0,port=1 -audiodev {"id":"audio1","driver":"spice"} -spice port=5900,addr=127.0.0.1,disable-ticketing=on,image-compression=off,seamless-migration=on -device qxl-vga,id=video0,max_outputs=1,ram_size=67108864,vram_size=67108864,vram64_size_mb=0,vgamem_mb=16,bus=pcie.0,addr=0x1 -device ich9-intel-hda,id=sound0,bus=pcie.0,addr=0x1b -device hda-duplex,id=sound0-codec0,bus=sound0.0,cad=0,audiodev=audio1 -chardev spicevmc,id=charredir0,name=usbredir -device usb-redir,chardev=charredir0,id=redir0,bus=usb.0,port=2 -chardev spicevmc,id=charredir1,name=usbredir -device usb-redir,chardev=charredir1,id=redir1,bus=usb.0,port=3 -device virtio-balloon-pci,id=balloon0,bus=pci.5,addr=0x0 -object {"qom-type":"rng-random","id":"objrng0","filename":"/dev/urandom"} -device virtio-rng-pci,rng=objrng0,id=rng0,bus=pci.6,addr=0x0 -sandbox on,obsolete=deny,elevateprivileges=deny,spawn=deny,resourcecontrol=deny -msg timestamp=on
+georgiy    10187  0.0  0.0 229660  7916 pts/1    S+   15:15   0:00 mc
+georgiy    10377  0.0  0.0 222328  2332 pts/2    S+   15:16   0:00 grep --color=auto mc
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ kill -s 9 10187
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ps aux | grep mc
+root         830  0.0  0.0   3284  1200 ?        Ss   14:26   0:00 /usr/sbin/mcelog --daemon --foreground
+qemu        8613 29.6 26.9 6746104 2160700 ?     Sl   15:00   5:30 /usr/bin/qemu-system-x86_64 -name guest=ubuntu22.04,debug-threads=on -S -object {"qom-type":"secret","id":"masterKey0","format":"raw","file":"/var/lib/libvirt/qemu/domain-1-ubuntu22.04/master-key.aes"} -machine pc-q35-6.2,usb=off,vmport=off,dump-guest-core=off,memory-backend=pc.ram -accel kvm -cpu host,migratable=on -m 2048 -object {"qom-type":"memory-backend-ram","id":"pc.ram","size":2147483648} -overcommit mem-lock=off -smp 2,sockets=2,cores=1,threads=1 -uuid d501a788-3d64-4e06-92c2-3e53a9fac136 -no-user-config -nodefaults -chardev socket,id=charmonitor,fd=29,server=on,wait=off -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc,driftfix=slew -global kvm-pit.lost_tick_policy=delay -no-hpet -no-shutdown -global ICH9-LPC.disable_s3=1 -global ICH9-LPC.disable_s4=1 -boot strict=on -device pcie-root-port,port=16,chassis=1,id=pci.1,bus=pcie.0,multifunction=on,addr=0x2 -device pcie-root-port,port=17,chassis=2,id=pci.2,bus=pcie.0,addr=0x2.0x1 -device pcie-root-port,port=18,chassis=3,id=pci.3,bus=pcie.0,addr=0x2.0x2 -device pcie-root-port,port=19,chassis=4,id=pci.4,bus=pcie.0,addr=0x2.0x3 -device pcie-root-port,port=20,chassis=5,id=pci.5,bus=pcie.0,addr=0x2.0x4 -device pcie-root-port,port=21,chassis=6,id=pci.6,bus=pcie.0,addr=0x2.0x5 -device pcie-root-port,port=22,chassis=7,id=pci.7,bus=pcie.0,addr=0x2.0x6 -device pcie-root-port,port=23,chassis=8,id=pci.8,bus=pcie.0,addr=0x2.0x7 -device pcie-root-port,port=24,chassis=9,id=pci.9,bus=pcie.0,multifunction=on,addr=0x3 -device pcie-root-port,port=25,chassis=10,id=pci.10,bus=pcie.0,addr=0x3.0x1 -device pcie-root-port,port=26,chassis=11,id=pci.11,bus=pcie.0,addr=0x3.0x2 -device pcie-root-port,port=27,chassis=12,id=pci.12,bus=pcie.0,addr=0x3.0x3 -device pcie-root-port,port=28,chassis=13,id=pci.13,bus=pcie.0,addr=0x3.0x4 -device pcie-root-port,port=29,chassis=14,id=pci.14,bus=pcie.0,addr=0x3.0x5 -device qemu-xhci,p2=15,p3=15,id=usb,bus=pci.2,addr=0x0 -device virtio-serial-pci,id=virtio-serial0,bus=pci.3,addr=0x0 -blockdev {"driver":"file","filename":"/var/lib/libvirt/images/ubuntu22.04.qcow2","node-name":"libvirt-2-storage","auto-read-only":true,"discard":"unmap"} -blockdev {"node-name":"libvirt-2-format","read-only":false,"discard":"unmap","driver":"qcow2","file":"libvirt-2-storage","backing":null} -device virtio-blk-pci,bus=pci.4,addr=0x0,drive=libvirt-2-format,id=virtio-disk0,bootindex=1 -device ide-cd,bus=ide.0,id=sata0-0-0 -netdev tap,fd=30,id=hostnet0,vhost=on,vhostfd=32 -device virtio-net-pci,netdev=hostnet0,id=net0,mac=52:54:00:72:67:fd,bus=pci.1,addr=0x0 -chardev pty,id=charserial0 -device isa-serial,chardev=charserial0,id=serial0,index=0 -chardev socket,id=charchannel0,fd=28,server=on,wait=off -device virtserialport,bus=virtio-serial0.0,nr=1,chardev=charchannel0,id=channel0,name=org.qemu.guest_agent.0 -chardev spicevmc,id=charchannel1,name=vdagent -device virtserialport,bus=virtio-serial0.0,nr=2,chardev=charchannel1,id=channel1,name=com.redhat.spice.0 -device usb-tablet,id=input0,bus=usb.0,port=1 -audiodev {"id":"audio1","driver":"spice"} -spice port=5900,addr=127.0.0.1,disable-ticketing=on,image-compression=off,seamless-migration=on -device qxl-vga,id=video0,max_outputs=1,ram_size=67108864,vram_size=67108864,vram64_size_mb=0,vgamem_mb=16,bus=pcie.0,addr=0x1 -device ich9-intel-hda,id=sound0,bus=pcie.0,addr=0x1b -device hda-duplex,id=sound0-codec0,bus=sound0.0,cad=0,audiodev=audio1 -chardev spicevmc,id=charredir0,name=usbredir -device usb-redir,chardev=charredir0,id=redir0,bus=usb.0,port=2 -chardev spicevmc,id=charredir1,name=usbredir -device usb-redir,chardev=charredir1,id=redir1,bus=usb.0,port=3 -device virtio-balloon-pci,id=balloon0,bus=pci.5,addr=0x0 -object {"qom-type":"rng-random","id":"objrng0","filename":"/dev/urandom"} -device virtio-rng-pci,rng=objrng0,id=rng0,bus=pci.6,addr=0x0 -sandbox on,obsolete=deny,elevateprivileges=deny,spawn=deny,resourcecontrol=deny -msg timestamp=on
+georgiy    10587  0.0  0.0 222328  2400 pts/2    S+   15:18   0:00 grep --color=auto mc
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ 

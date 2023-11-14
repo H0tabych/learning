@@ -1,0 +1,316 @@
+chrony:x:993:
+rpc:x:32:
+colord:x:992:
+openvpn:x:991:
+nm-openvpn:x:990:
+nm-openconnect:x:989:
+pipewire:x:988:
+abrt:x:173:
+mysql:x:27:
+flatpak:x:987:
+sddm:x:986:
+rpcuser:x:29:
+vboxsf:x:985:
+sshd:x:74:
+dnsmasq:x:984:
+tcpdump:x:72:
+plocate:x:983:
+georgiy:x:1000:
+systemd-coredump:x:982:
+systemd-timesync:x:981:
+akmods:x:980:
+postgres:x:26:
+apache:x:48:
+gluster:x:979:
+brlapi:x:978:
+qemu:x:107:
+saslauth:x:76:
+libvirt:x:977:
+georgiy@fedora:~ $ useradd -s /bin/bash -d /home/user -m super_user
+useradd: Permission denied.
+useradd: не удалось заблокировать /etc/passwd; попробуйте ещё раз позже.
+georgiy@fedora:~ $ sudo useradd -s /bin/bash -d /home/user -m super_user
+[sudo] пароль для georgiy: 
+georgiy@fedora:~ $ sudo usermod -aG sudo super_user
+usermod: группа «sudo» не существует
+georgiy@fedora:~ $ sudo usermod -aG wheel super_user
+georgiy@fedora:~ $ sudo passwd super_user
+Изменение пароля пользователя super_user.
+Новый пароль: 
+НЕУДАЧНЫЙ ПАРОЛЬ: Пароль должен содержать не менее 8 символов
+Повторите ввод нового пароля: 
+passwd: данные аутентификации успешно обновлены.
+georgiy@fedora:~ $ su super_user
+Пароль: 
+super_user@fedora:/home/georgiy $ sudo dnf update --refresh
+
+Мы полагаем, что ваш системный администратор изложил вам основы
+безопасности. Как правило, всё сводится к трём следующим правилам:
+
+    №1) Уважайте частную жизнь других.
+    №2) Думайте, прежде что-то вводить.
+    №3) С большой властью приходит большая ответственность.
+
+[sudo] пароль для super_user: 
+Попробуйте ещё раз.
+[sudo] пароль для super_user: 
+Fedora 36 - x86_64                                                                                                                      25 kB/s |  20 kB     00:00    
+Fedora 36 openh264 (From Cisco) - x86_64                                                                                               1.8 kB/s | 989  B     00:00    
+Fedora Modular 36 - x86_64                                                                                                              53 kB/s |  20 kB     00:00    
+Fedora 36 - x86_64 - Updates                                                                                                            30 kB/s | 9.5 kB     00:00    
+Fedora 36 - x86_64 - Updates                                                                                                           202 kB/s | 490 kB     00:02    
+Fedora Modular 36 - x86_64 - Updates                                                                                                    54 kB/s |  19 kB     00:00    
+pgadmin4                                                                                                                               830  B/s | 833  B     00:01    
+PostgreSQL common RPMs for Fedora 36 - x86_64                                                                                          226  B/s | 195  B     00:00    
+PostgreSQL 15 for Fedora 36 - x86_64                                                                                                   248  B/s | 195  B     00:00    
+PostgreSQL 14 for Fedora 36 - x86_64                                                                                                   161  B/s | 195  B     00:01    
+PostgreSQL 13 for Fedora 36 - x86_64                                                                                                   201  B/s | 195  B     00:00    
+PostgreSQL 12 for Fedora 36 - x86_64                                                                                                   202  B/s | 195  B     00:00    
+PostgreSQL 11 for Fedora 36 - x86_64                                                                                                   144  B/s | 195  B     00:01    
+PostgreSQL 10 for Fedora 36 - x86_64                                                                                                   213  B/s | 195  B     00:00    
+created by dnf config-manager from http://repo.yandex.ru/yandex-browser/rpm/stable/x86_64                                               23 kB/s | 3.0 kB     00:00    
+RPM Fusion for Fedora 36 - Free                                                                                                         13 kB/s | 7.7 kB     00:00    
+RPM Fusion for Fedora 36 - Free - Updates                                                                                              9.8 kB/s | 7.0 kB     00:00    
+RPM Fusion for Fedora 36 - Nonfree                                                                                                      25 kB/s | 7.8 kB     00:00    
+RPM Fusion for Fedora 36 - Nonfree - Updates                                                                                            22 kB/s | 7.1 kB     00:00    
+yandex-browser                                                                                                                          34 kB/s | 3.0 kB     00:00    
+Зависимости разрешены.
+=======================================================================================================================================================================
+ Пакет                                                       Архитектура              Версия                                     Репозиторий                     Размер
+=======================================================================================================================================================================
+Установка:
+ kernel                                                      x86_64                   5.19.15-201.fc36                           updates                         264 k
+ kernel-core                                                 x86_64                   5.19.15-201.fc36                           updates                          49 M
+ kernel-devel                                                x86_64                   5.19.15-201.fc36                           updates                          16 M
+ kernel-modules                                              x86_64                   5.19.15-201.fc36                           updates                          58 M
+ kernel-modules-extra                                        x86_64                   5.19.15-201.fc36                           updates                         3.7 M
+Обновление:
+ amd-gpu-firmware                                            noarch                   20221012-141.fc36                          updates                          15 M
+ ansible-srpm-macros                                         noarch                   1-8.1.fc36                                 updates                         8.5 k
+ appstream                                                   x86_64                   0.15.5-1.fc36                              updates                         668 k
+ appstream-qt                                                x86_64                   0.15.5-1.fc36                              updates                          78 k
+ bash                                                        x86_64                   5.2.2-2.fc36                               updates                         1.8 M
+ btrfs-progs                                                 x86_64                   6.0-1.fc36                                 updates                         966 k
+ dbus                                                        x86_64                   1:1.14.4-1.fc36                            updates                         7.2 k
+ dbus-common                                                 noarch                   1:1.14.4-1.fc36                            updates                          14 k
+ dbus-daemon                                                 x86_64                   1:1.14.4-1.fc36                            updates                         209 k
+ dbus-libs                                                   i686                     1:1.14.4-1.fc36                            updates                         166 k
+ dbus-libs                                                   x86_64                   1:1.14.4-1.fc36                            updates                         155 k
+ dbus-tools                                                  x86_64                   1:1.14.4-1.fc36                            updates                          53 k
+ dbus-x11                                                    x86_64                   1:1.14.4-1.fc36                            updates                          25 k
+ dhcp-client                                                 x86_64                   12:4.4.3-4.P1.fc36                         updates                         805 k
+ dhcp-common                                                 noarch                   12:4.4.3-4.P1.fc36                         updates                         127 k
+ gdb                                                         x86_64                   12.1-2.fc36                                updates                         132 k
+ gdb-headless                                                x86_64                   12.1-2.fc36                                updates                         4.5 M
+ ghostscript                                                 x86_64                   9.56.1-3.fc36                              updates                          37 k
+ ghostscript-tools-fonts                                     x86_64                   9.56.1-3.fc36                              updates                          12 k
+ ghostscript-tools-printing                                  x86_64                   9.56.1-3.fc36                              updates                          12 k
+ grub2-common                                                noarch                   1:2.06-54.fc36                             updates                         906 k
+ grub2-efi-ia32                                              x86_64                   1:2.06-54.fc36                             updates                         1.3 M
+ grub2-efi-ia32-cdboot                                       x86_64                   1:2.06-54.fc36                             updates                         1.3 M
+ grub2-efi-x64                                               x86_64                   1:2.06-54.fc36                             updates                         1.3 M
+ grub2-efi-x64-cdboot                                        x86_64                   1:2.06-54.fc36                             updates                         1.3 M
+ grub2-pc                                                    x86_64                   1:2.06-54.fc36                             updates                          17 k
+ grub2-pc-modules                                            noarch                   1:2.06-54.fc36                             updates                         907 k
+ grub2-tools                                                 x86_64                   1:2.06-54.fc36                             updates                         1.8 M
+ grub2-tools-efi                                             x86_64                   1:2.06-54.fc36                             updates                         542 k
+ grub2-tools-extra                                           x86_64                   1:2.06-54.fc36                             updates                         842 k
+ grub2-tools-minimal                                         x86_64                   1:2.06-54.fc36                             updates                         605 k
+ ibus-typing-booster                                         noarch                   2.19.2-1.fc36                              updates                         1.0 M
+ intel-gpu-firmware                                          noarch                   20221012-141.fc36                          updates                         7.6 M
+ iwl100-firmware                                             noarch                   39.31.5.1-141.fc36                         updates                         141 k
+ iwl1000-firmware                                            noarch                   1:39.31.5.1-141.fc36                       updates                         252 k
+ iwl105-firmware                                             noarch                   18.168.6.1-141.fc36                        updates                         220 k
+ iwl135-firmware                                             noarch                   18.168.6.1-141.fc36                        updates                         228 k
+ iwl2000-firmware                                            noarch                   18.168.6.1-141.fc36                        updates                         222 k
+ iwl2030-firmware                                            noarch                   18.168.6.1-141.fc36                        updates                         231 k
+ iwl3160-firmware                                            noarch                   1:25.30.13.0-141.fc36                      updates                         993 k
+ iwl3945-firmware                                            noarch                   15.32.2.9-141.fc36                         updates                          82 k
+ iwl4965-firmware                                            noarch                   228.61.2.24-141.fc36                       updates                          95 k
+ iwl5000-firmware                                            noarch                   8.83.5.1_1-141.fc36                        updates                         365 k
+ iwl5150-firmware                                            noarch                   8.24.2.2-141.fc36                          updates                         138 k
+ iwl6000-firmware                                            noarch                   9.221.4.1-141.fc36                         updates                         157 k
+ iwl6000g2a-firmware                                         noarch                   18.168.6.1-141.fc36                        updates                         337 k
+ iwl6000g2b-firmware                                         noarch                   18.168.6.1-141.fc36                        updates                         344 k
+ iwl6050-firmware                                            noarch                   41.28.5.1-141.fc36                         updates                         295 k
+ iwl7260-firmware                                            noarch                   1:25.30.13.0-141.fc36                      updates                         9.5 M
+ iwlax2xx-firmware                                           noarch                   20221012-141.fc36                          updates                          45 M
+ kernel-devel-matched                                        x86_64                   5.19.15-201.fc36                           updates                         264 k
+ koji                                                        noarch                   1.30.1-1.fc36                              updates                         212 k
+ libertas-usb8388-firmware                                   noarch                   2:20221012-141.fc36                        updates                         106 k
+ libgs                                                       x86_64                   9.56.1-3.fc36                              updates                         3.5 M
+ libmaxminddb                                                x86_64                   1.7.1-1.fc36                               updates                          41 k
+ libwayland-client                                           i686                     1.21.0-1.fc36                              updates                          33 k
+ libwayland-client                                           x86_64                   1.21.0-1.fc36                              updates                          33 k
+ libwayland-cursor                                           i686                     1.21.0-1.fc36                              updates                          20 k
+ libwayland-cursor                                           x86_64                   1.21.0-1.fc36                              updates                          19 k
+ libwayland-egl                                              i686                     1.21.0-1.fc36                              updates                          13 k
+ libwayland-egl                                              x86_64                   1.21.0-1.fc36                              updates                          13 k
+ libwayland-server                                           i686                     1.21.0-1.fc36                              updates                          43 k
+ libwayland-server                                           x86_64                   1.21.0-1.fc36                              updates                          41 k
+ linux-firmware                                              noarch                   20221012-141.fc36                          updates                         177 M
+ linux-firmware-whence                                       noarch                   20221012-141.fc36                          updates                          52 k
+ mod_http2                                                   x86_64                   2.0.9-1.fc36                               updates                         148 k
+ nvidia-gpu-firmware                                         noarch                   20221012-141.fc36                          updates                         1.2 M
+ procps-ng                                                   x86_64                   3.3.17-4.fc36.1                            updates                         330 k
+ python3-koji                                                noarch                   1.30.1-1.fc36                              updates                         307 k
+ source-highlight                                            x86_64                   3.1.9-15.fc36                              updates                         695 k
+ vim-common                                                  x86_64                   2:9.0.720-1.fc36                           updates                         7.2 M
+ vim-data                                                    noarch                   2:9.0.720-1.fc36                           updates                          25 k
+ vim-enhanced                                                x86_64                   2:9.0.720-1.fc36                           updates                         2.0 M
+ vim-filesystem                                              noarch                   2:9.0.720-1.fc36                           updates                          19 k
+ vim-minimal                                                 x86_64                   2:9.0.720-1.fc36                           updates                         775 k
+Установка слабых зависимостей:
+ python3-langtable                                           noarch                   0.0.60-1.fc36                              updates                         1.2 M
+Удаление:
+ kernel                                                      x86_64                   5.19.12-200.fc36                           @updates                          0  
+ kernel-core                                                 x86_64                   5.19.12-200.fc36                           @updates                         92 M
+ kernel-devel                                                x86_64                   5.19.12-200.fc36                           @updates                         65 M
+ kernel-modules                                              x86_64                   5.19.12-200.fc36                           @updates                         57 M
+ kernel-modules-extra                                        x86_64                   5.19.12-200.fc36                           @updates                        3.4 M
+Удаление зависимых пакетов:
+ kmod-nvidia-470xx-5.19.12-200.fc36.x86_64                   x86_64                   3:470.141.03-1.fc36                        @@commandline                    24 M
+
+Результат транзакции
+=======================================================================================================================================================================
+Установка    6 Пакетов
+Обновление  75 Пакетов
+Удаление     6 Пакетов
+
+Объем загрузки: 425 M
+Все правильно? [Д/н]: n
+Операция прервана.
+super_user@fedora:/home/georgiy $ groups
+super_user wheel
+super_user@fedora:/home/georgiy $ exit
+exit
+georgiy@fedora:~ $ sudo gpasswd -d super_user wheel
+Удаление пользователя super_user из группы wheel
+georgiy@fedora:~ $ sudo visudo
+georgiy@fedora:~ $ cat /etc/sudoers
+cat: /etc/sudoers: Отказано в доступе
+georgiy@fedora:~ $ sudo cat /etc/sudoers
+[sudo] пароль для georgiy:
+## Sudoers allows particular users to run various commands as
+## the root user, without needing the root password.
+##
+## Examples are provided at the bottom of the file for collections
+## of related commands, which can then be delegated out to particular
+## users or groups.
+##
+## This file must be edited with the 'visudo' command.
+
+## Host Aliases
+## Groups of machines. You may prefer to use hostnames (perhaps using
+## wildcards for entire domains) or IP addresses instead.
+# Host_Alias     FILESERVERS = fs1, fs2
+# Host_Alias     MAILSERVERS = smtp, smtp2
+
+## User Aliases
+## These aren't often necessary, as you can use regular groups
+## (ie, from files, LDAP, NIS, etc) in this file - just use %groupname
+## rather than USERALIAS
+# User_Alias ADMINS = jsmith, mikem
+
+
+## Command Aliases
+## These are groups of related commands...
+
+## Networking
+# Cmnd_Alias NETWORKING = /sbin/route, /sbin/ifconfig, /bin/ping, /sbin/dhclient, /usr/bin/net, /sbin/iptables, /usr/bin/rfcomm, /usr/bin/wvdial, /sbin/iwconfig, /sbin/mii-tool
+
+## Installation and management of software
+# Cmnd_Alias SOFTWARE = /bin/rpm, /usr/bin/up2date, /usr/bin/yum
+
+## Services
+# Cmnd_Alias SERVICES = /sbin/service, /sbin/chkconfig, /usr/bin/systemctl start, /usr/bin/systemctl stop, /usr/bin/systemctl reload, /usr/bin/systemctl restart, /usr/bin/systemctl status, /usr/bin/systemctl enable, /usr/bin/systemctl disable
+
+## Updating the locate database
+# Cmnd_Alias LOCATE = /usr/bin/updatedb
+
+## Storage
+# Cmnd_Alias STORAGE = /sbin/fdisk, /sbin/sfdisk, /sbin/parted, /sbin/partprobe, /bin/mount, /bin/umount
+
+## Delegating permissions
+# Cmnd_Alias DELEGATING = /usr/sbin/visudo, /bin/chown, /bin/chmod, /bin/chgrp
+
+## Processes
+# Cmnd_Alias PROCESSES = /bin/nice, /bin/kill, /usr/bin/kill, /usr/bin/killall
+
+## Drivers
+# Cmnd_Alias DRIVERS = /sbin/modprobe
+
+# Defaults specification
+
+#
+# Refuse to run if unable to disable echo on the tty.
+#
+Defaults   !visiblepw
+
+#
+# Preserving HOME has security implications since many programs
+# use it when searching for configuration files. Note that HOME
+# is already set when the the env_reset option is enabled, so
+# this option is only effective for configurations where either
+# env_reset is disabled or HOME is present in the env_keep list.
+#
+Defaults    always_set_home
+Defaults    match_group_by_gid
+
+# Prior to version 1.8.15, groups listed in sudoers that were not
+# found in the system group database were passed to the group
+# plugin, if any. Starting with 1.8.15, only groups of the form
+# %:group are resolved via the group plugin by default.
+# We enable always_query_group_plugin to restore old behavior.
+# Disable this option for new behavior.
+Defaults    always_query_group_plugin
+
+Defaults    env_reset
+Defaults    env_keep =  "COLORS DISPLAY HOSTNAME HISTSIZE KDEDIR LS_COLORS"
+Defaults    env_keep += "MAIL QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE"
+Defaults    env_keep += "LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES"
+Defaults    env_keep += "LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE"
+Defaults    env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY"
+
+#
+# Adding HOME to env_keep may enable a user to run unrestricted
+# commands via sudo.
+#
+# Defaults   env_keep += "HOME"
+
+Defaults    secure_path = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin
+
+## Next comes the main part: which users can run what software on
+## which machines (the sudoers file can be shared between multiple
+## systems).
+## Syntax:
+##
+##      user    MACHINE=COMMANDS
+##
+## The COMMANDS section may have other options added to it.
+##
+## Allow root to run any commands anywhere
+root    ALL=(ALL)       ALL
+super_user All=/usr/sbin/adduser
+
+## Allows members of the 'sys' group to run networking, software,
+## service management apps and more.
+# %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
+
+## Allows people in group wheel to run all commands
+%wheel  ALL=(ALL)       ALL
+
+## Same thing without a password
+# %wheel        ALL=(ALL)       NOPASSWD: ALL
+
+## Allows members of the users group to mount and unmount the
+## cdrom as root
+# %users  ALL=/sbin/mount /mnt/cdrom, /sbin/umount /mnt/cdrom
+
+## Allows members of the users group to shutdown this system
+# %users  localhost=/sbin/shutdown -h now
+
+## Read drop-in files from /etc/sudoers.d (the # here does not mean a comment)
+#includedir /etc/sudoers.d
+georgiy@fedora:~ $ sudo visudo
+georgiy@fedora:~ $

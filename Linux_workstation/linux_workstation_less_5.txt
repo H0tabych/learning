@@ -1,0 +1,293 @@
+georgiy@fedora:~ $ cd Documents/programming/GB/Homework/Linux_workstation/
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 172
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ echo "some text" > file1
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat file1
+some text
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cp file1 file2
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ln -s file1 file3
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ln file1 file4
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ll
+итого 188
+-rw-r--r--. 2 georgiy georgiy    10 окт 24 23:42  file1
+-rw-r--r--. 1 georgiy georgiy    10 окт 24 23:43  file2
+lrwxrwxrwx. 1 georgiy georgiy     5 окт 24 23:46  file3 -> file1
+-rw-r--r--. 2 georgiy georgiy    10 окт 24 23:42  file4
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -li
+итого 188
+379201 -rw-r--r--. 2 georgiy georgiy    10 окт 24 23:42  file1
+379207 -rw-r--r--. 1 georgiy georgiy    10 окт 24 23:43  file2
+379236 lrwxrwxrwx. 1 georgiy georgiy     5 окт 24 23:46  file3 -> file1
+379201 -rw-r--r--. 2 georgiy georgiy    10 окт 24 23:42  file4
+295710 -rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+318528 -rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+366818 -rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+374429 -rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+295496 -rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+301997 -rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+360322 -rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+370029 -rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+372753 -rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ rm file1
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -li
+итого 184
+379207 -rw-r--r--. 1 georgiy georgiy    10 окт 24 23:43  file2
+379236 lrwxrwxrwx. 1 georgiy georgiy     5 окт 24 23:46  file3 -> file1
+379201 -rw-r--r--. 1 georgiy georgiy    10 окт 24 23:42  file4
+295710 -rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+318528 -rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+366818 -rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+374429 -rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+295496 -rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+301997 -rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+360322 -rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+370029 -rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+372753 -rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat file2
+some text
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat file3
+cat: file3: Нет такого файла или каталога
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat file4
+some text
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ # Жёсткая ссылка и копия работают, символическая ссылка - нет
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cp file2 file1
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ mv file1 file11
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ mv file2 file22
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ln -s file11 file11_slink
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ln -s $(pwd)/file22 file22_slink
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 196
+-rw-r--r--. 1 georgiy georgiy    10 окт 24 23:55  file11
+lrwxrwxrwx. 1 georgiy georgiy     6 окт 25 00:42  file11_slink -> file11
+-rw-r--r--. 1 georgiy georgiy    10 окт 24 23:43  file22
+lrwxrwxrwx. 1 georgiy georgiy    72 окт 25 00:42  file22_slink -> /home/georgiy/Documents/programming/GB/Homework/Linux_workstation/file22
+lrwxrwxrwx. 1 georgiy georgiy     5 окт 24 23:46  file3 -> file1
+-rw-r--r--. 1 georgiy georgiy    10 окт 24 23:42  file4
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ mkdir other_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ mv *_slink other_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ tree
+.
+├── file11
+├── file22
+├── file3 -> file1
+├── file4
+├── linux_workstation_less_1.txt
+├── linux_workstation_less_2.txt
+├── linux_workstation_less_3.txt
+├── linux_workstation_less_4.txt
+├── _Linux workstation - lesson 1 - examples.sh
+├── _Linux workstation - lesson 2 - examples.sh
+├── _Linux workstation - lesson 3 - examples.sh
+├── _Linux workstation - lesson 4 - examples.sh
+├── _Linux workstation - lesson 5 - examples.sh
+└── other_dir
+    ├── file11_slink -> file11
+    └── file22_slink -> /home/georgiy/Documents/programming/GB/Homework/Linux_workstation/file22
+
+1 directory, 15 files
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ rm file* -r
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ tree
+.
+├── linux_workstation_less_1.txt
+├── linux_workstation_less_2.txt
+├── linux_workstation_less_3.txt
+├── linux_workstation_less_4.txt
+├── _Linux workstation - lesson 1 - examples.sh
+├── _Linux workstation - lesson 2 - examples.sh
+├── _Linux workstation - lesson 3 - examples.sh
+├── _Linux workstation - lesson 4 - examples.sh
+├── _Linux workstation - lesson 5 - examples.sh
+└── other_dir
+    ├── file11_slink -> file11
+    └── file22_slink -> /home/georgiy/Documents/programming/GB/Homework/Linux_workstation/file22
+
+1 directory, 11 files
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ rm -r other_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ tree
+.
+├── linux_workstation_less_1.txt
+├── linux_workstation_less_2.txt
+├── linux_workstation_less_3.txt
+├── linux_workstation_less_4.txt
+├── _Linux workstation - lesson 1 - examples.sh
+├── _Linux workstation - lesson 2 - examples.sh
+├── _Linux workstation - lesson 3 - examples.sh
+├── _Linux workstation - lesson 4 - examples.sh
+└── _Linux workstation - lesson 5 - examples.sh
+
+0 directories, 9 files
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ echo '1234' > file1
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ echo '9876' > file2
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ chmod u=rw,g=rw,o=r
+chmod: пропущен операнд после «u=rw,g=rw,o=r»
+По команде «chmod --help» можно получить дополнительную информацию.
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ chmod u=rw,g=rw,o=r file1
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ chmod 644 file2
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 180
+-rw-rw-r--. 1 georgiy georgiy     5 окт 25 00:47  file1
+-rw-r--r--. 1 georgiy georgiy     5 окт 25 00:47  file2
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo groupadd developers
+[sudo] пароль для georgiy: 
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo useradd -m -s /bin/bash user1
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo useradd -m -s /bin/bash user2
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo usermod -aG developers user1
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo usermod -aG developers user2
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ mkdir some_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo chmod g=rw some_dir/
+[sudo] пароль для georgiy:
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 180
+-rw-rw-r--. 1 georgiy georgiy     5 окт 25 00:47  file1
+-rw-r--r--. 1 georgiy georgiy     5 окт 25 00:47  file2
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+drwxr-xr-x. 1 georgiy georgiy     0 окт 25 00:56  some_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo chown -R :developers some_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo passwd user1
+Изменение пароля пользователя user1.
+Новый пароль: 
+НЕУДАЧНЫЙ ПАРОЛЬ: Пароль должен содержать не менее 8 символов
+Повторите ввод нового пароля: 
+passwd: данные аутентификации успешно обновлены.
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ groups user1
+user1 : user1 developers
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ groups user2
+user2 : user2 developers
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 196
+-rw-rw-r--. 1 georgiy georgiy        5 окт 25 00:47  file1
+-rw-r--r--. 1 georgiy georgiy        5 окт 25 00:47  file2
+-rw-r--r--. 1 georgiy georgiy    53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy     7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy    25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy    38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy    15358 окт 25 01:27  linux_workstation_less_5.txt
+-rw-r--r--. 1 georgiy georgiy      437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy    11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy     4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy     9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy     6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+drwxrw-r-x. 1 georgiy developers     0 окт 25 00:56  some_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ mkdir some_dir/sub_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ tree
+.
+├── file1
+├── file2
+├── linux_workstation_less_1.txt
+├── linux_workstation_less_2.txt
+├── linux_workstation_less_3.txt
+├── linux_workstation_less_4.txt
+├── linux_workstation_less_5.txt
+├── _Linux workstation - lesson 1 - examples.sh
+├── _Linux workstation - lesson 2 - examples.sh
+├── _Linux workstation - lesson 3 - examples.sh
+├── _Linux workstation - lesson 4 - examples.sh
+├── _Linux workstation - lesson 5 - examples.sh
+└── some_dir
+    └── sub_dir
+
+2 directories, 12 files
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ chmod +t -R some_dir/sub_dir/
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cd some_dir/
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation/some_dir $ ls -l
+итого 0
+drwxr-xr-t. 1 georgiy georgiy 0 окт 25 01:34 sub_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation/some_dir $ cd ..
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ touch .file1
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 200
+-rw-rw-r--. 1 georgiy georgiy        5 окт 25 00:47  file1
+-rw-r--r--. 1 georgiy georgiy        5 окт 25 00:47  file2
+-rw-r--r--. 1 georgiy georgiy    53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy     7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy    25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy    38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy    16424 окт 25 01:35  linux_workstation_less_5.txt
+-rw-r--r--. 1 georgiy georgiy      437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy    11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy     4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy     9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy     6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+drwxrw-r-x. 1 georgiy developers    14 окт 25 01:34  some_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -la
+итого 200
+drwxr-xr-x. 1 georgiy georgiy      758 окт 25 01:37  .
+drwxr-xr-x. 1 georgiy georgiy       98 окт  6 20:54  ..
+-rw-r--r--. 1 georgiy georgiy        0 окт 25 01:37  .file1
+-rw-rw-r--. 1 georgiy georgiy        5 окт 25 00:47  file1
+-rw-r--r--. 1 georgiy georgiy        5 окт 25 00:47  file2
+-rw-r--r--. 1 georgiy georgiy    53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy     7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy    25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy    38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy    16424 окт 25 01:35  linux_workstation_less_5.txt
+-rw-r--r--. 1 georgiy georgiy      437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy    11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ touch file2
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ sudo chmod 000 -R file2
+[sudo] пароль для georgiy:
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -la
+итого 200
+drwxr-xr-x. 1 georgiy georgiy      758 окт 25 01:38  .
+drwxr-xr-x. 1 georgiy georgiy       98 окт  6 20:54  ..
+-rw-r--r--. 1 georgiy georgiy        0 окт 25 01:37  .file1
+-rw-rw-r--. 1 georgiy georgiy        5 окт 25 00:47  file1
+----------. 1 georgiy georgiy        5 окт 25 01:38  file2
+-rw-r--r--. 1 georgiy georgiy    53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy     7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy    25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy    38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy    18750 окт 25 01:38  linux_workstation_less_5.txt
+-rw-r--r--. 1 georgiy georgiy      437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy    11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy     4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy     9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy     6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+drwxrw-r-x. 1 georgiy developers    14 окт 25 01:34  some_dir
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $
+
+

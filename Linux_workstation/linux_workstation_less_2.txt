@@ -1,0 +1,151 @@
+georgiy@fedora:~ $ cd Downloads/GB/
+bash: cd: Downloads/GB/: Нет такого файла или каталога
+georgiy@fedora:~ $ cd Documents/GB/Homework/
+georgiy@fedora:~/Documents/GB/Homework $ cd Linux_workstation/
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ ls -l
+итого 68
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ cp linux_workstation_less_1.txt linux_workstation_less_2.txt 
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ mkdir students mentors
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ ls -l
+итого 120
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy 53033 окт 10 18:23  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+drwxr-xr-x. 1 georgiy georgiy     0 окт 10 18:25  mentors
+drwxr-xr-x. 1 georgiy georgiy     0 окт 10 18:25  students
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ touch mentors/mentors_list.txt
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ vim mentors/mentors_list.txt 
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ vim mentors/mentors_list.txt
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ touch students/students_list.txt
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ vim students/students_list.txt 
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ mv mentors/mentors_list.txt students/
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ tree
+.
+├── linux_workstation_less_1.txt
+├── linux_workstation_less_2.txt
+├── _Linux workstation - lesson 1 - examples.sh
+├── _Linux workstation - lesson 2 - examples.sh
+├── mentors
+└── students
+    ├── mentors_list.txt
+    └── students_list.txt
+
+2 directories, 6 files
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ rm mentors/ -r
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ tree
+.
+├── linux_workstation_less_1.txt
+├── linux_workstation_less_2.txt
+├── _Linux workstation - lesson 1 - examples.sh
+├── _Linux workstation - lesson 2 - examples.sh
+└── students
+    ├── mentors_list.txt
+    └── students_list.txt
+
+1 directory, 6 files
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ mv students/ students_and_mentors
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ tree
+.
+├── linux_workstation_less_1.txt
+├── linux_workstation_less_2.txt
+├── _Linux workstation - lesson 1 - examples.sh
+├── _Linux workstation - lesson 2 - examples.sh
+└── students_and_mentors
+    ├── mentors_list.txt
+    └── students_list.txt
+
+1 directory, 6 files
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ rm students_and_mentors/ -r
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ tree
+.
+├── linux_workstation_less_1.txt
+├── linux_workstation_less_2.txt
+├── _Linux workstation - lesson 1 - examples.sh
+└── _Linux workstation - lesson 2 - examples.sh
+
+0 directories, 4 files
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ vim linux_workstation_less_2.txt 
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ ssh 192.168.122.200
+georgiy@192.168.122.200's password: 
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-50-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+1 обновление может быть применено немедленно.
+Чтобы просмотреть дополнительные обновления выполните: apt list --upgradable
+
+*** System restart required ***
+Last login: Mon Oct 10 19:11:18 2022 from 192.168.122.1
+georgiy@VirtualUbuntu:~$ uname
+Linux
+georgiy@VirtualUbuntu:~$ hostname
+VirtualUbuntu
+georgiy@VirtualUbuntu:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp1s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 52:54:00:72:67:fd brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.200/24 brd 192.168.122.255 scope global dynamic noprefixroute enp1s0
+       valid_lft 1986sec preferred_lft 1986sec
+    inet6 fe80::da65:3cf:5506:7e50/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+georgiy@VirtualUbuntu:~$ whoami
+georgiy
+georgiy@VirtualUbuntu:~$ exit
+выход
+Connection to 192.168.122.200 closed.
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ ssh-copy-id 192.168.122.200
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/georgiy/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+georgiy@192.168.122.200's password: 
+Permission denied, please try again.
+georgiy@192.168.122.200's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh '192.168.122.200'"
+and check to make sure that only the key(s) you wanted were added.
+
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ ssh 192.168.122.200
+Enter passphrase for key '/home/georgiy/.ssh/id_rsa': 
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-50-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+1 обновление может быть применено немедленно.
+Чтобы просмотреть дополнительные обновления выполните: apt list --upgradable
+
+*** System restart required ***
+Last login: Mon Oct 10 19:12:03 2022 from 192.168.122.1
+georgiy@VirtualUbuntu:~$ whoami
+georgiy
+georgiy@VirtualUbuntu:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp1s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 52:54:00:72:67:fd brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.200/24 brd 192.168.122.255 scope global dynamic noprefixroute enp1s0
+       valid_lft 2637sec preferred_lft 2637sec
+    inet6 fe80::da65:3cf:5506:7e50/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+georgiy@VirtualUbuntu:~$ exit
+выход
+Connection to 192.168.122.200 closed.
+georgiy@fedora:~/Documents/GB/Homework/Linux_workstation $ 

@@ -1,0 +1,97 @@
+georgiy@fedora:~ $ cd Documents/programming/GB/Homework/Linux_workstation/
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 204
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy 20427 окт 25 01:39  linux_workstation_less_5.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9862 окт 24 23:50 '_Linux workstation - lesson 6 - examples.sh'
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat > print_user.sh
+#!/bin/bash
+for i in {1..3}
+        do        
+                echo $USER
+        donegeorgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ 
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat print_user.sh 
+#!/bin/bash
+for i in {1..3}
+        do
+                echo $USER
+        donegeorgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ 
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ bash print_user.sh 
+georgiy
+georgiy
+georgiy
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat > even_num_100
+#!/bin/bash/   
+x=0
+while [$x -lt 102]
+do
+        printf "${x} "
+        let x += 2
+done
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ cat even_num_100 
+#!/bin/bash/
+x=0
+while [$x -lt 102]
+do
+        printf "${x} "
+        let x += 2
+done
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ bash even_num_100 
+even_num_100: строка 3: [0: команда не найдена
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ vim even_num_100 
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ bash even_num_100 
+even_num_100: строка 2: x: команда не найдена
+even_num_100: строка 3: [: отсутствует символ «]»
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ vim even_num_100 
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ bash even_num_100 
+0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ 
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ nano test.txt
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ls -l
+итого 216
+-rw-r--r--. 1 georgiy georgiy    72 окт 29 20:55  even_num_100
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy 20427 окт 25 01:39  linux_workstation_less_5.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9862 окт 24 23:50 '_Linux workstation - lesson 6 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy    50 окт 29 20:46  print_user.sh
+-rw-r--r--. 1 georgiy georgiy    10 окт 29 20:56  test.txt
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ crontab -e
+crontab: installing new crontab
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ crontab -l
+*/10  * * * * cp –b /home/Documents/programming/GB/Homework/Linux_workstation/test.txt /home/Documents/programming/GB/Homework/Linux_workstation/test.txt.bak
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ ll
+итого 216
+-rw-r--r--. 1 georgiy georgiy    72 окт 29 20:55  even_num_100
+-rw-r--r--. 1 georgiy georgiy 53033 окт  6 21:05  linux_workstation_less_1.txt
+-rw-r--r--. 1 georgiy georgiy  7450 окт 10 19:29  linux_workstation_less_2.txt
+-rw-r--r--. 1 georgiy georgiy 25977 окт 17 23:26  linux_workstation_less_3.txt
+-rw-r--r--. 1 georgiy georgiy 38468 окт 23 15:22  linux_workstation_less_4.txt
+-rw-r--r--. 1 georgiy georgiy 20427 окт 25 01:39  linux_workstation_less_5.txt
+-rw-r--r--. 1 georgiy georgiy   437 окт  6 20:49 '_Linux workstation - lesson 1 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy 11949 окт  7 22:35 '_Linux workstation - lesson 2 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  4460 окт 16 21:51 '_Linux workstation - lesson 3 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9635 окт 20 00:05 '_Linux workstation - lesson 4 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  6768 окт 23 14:41 '_Linux workstation - lesson 5 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy  9862 окт 24 23:50 '_Linux workstation - lesson 6 - examples.sh'
+-rw-r--r--. 1 georgiy georgiy    50 окт 29 20:46  print_user.sh
+-rw-r--r--. 1 georgiy georgiy    10 окт 29 20:56  test.txt
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ crontab -e
+crontab: installing new crontab
+georgiy@fedora:~/Documents/programming/GB/Homework/Linux_workstation $ crontab -l
+*/10  * * * * cp –b /home/georgiy/Documents/programming/GB/Homework/Linux_workstation/test.txt /home/georgiy/Documents/programming/GB/Homework/Linux_workstation/test.txt.bak
+
